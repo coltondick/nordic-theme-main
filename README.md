@@ -1,7 +1,7 @@
 <!-- PROJECT SHIELDS -->
 <div align="center">
 
-[![Last Commit](https://img.shields.io/github/last-commit/coltondick/nordic-theme-main?style=for-the-badge)](https://github.com/coltondick/nordic-theme-main/commits/main) [![GitHub license](https://img.shields.io/github/license/coltondick/nordic-theme-main?style=for-the-badge)](https://github.com/coltondick/nordic-theme-main/blob/main/LICENSE) [![GitHub stars](https://img.shields.io/github/stars/coltondick/nordic-theme-main?style=for-the-badge)](https://github.com/coltondick/nordic-theme-main/stargazers) [![Linkedin](https://img.shields.io/badge/LinkedIn-2E3440?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/coltdi)
+[![hacs_badge](https://img.shields.io/badge/HACS-Default-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration) [![Last Commit](https://img.shields.io/github/last-commit/coltondick/nordic-theme-main?style=for-the-badge)](https://github.com/coltondick/nordic-theme-main/commits/main) [![GitHub license](https://img.shields.io/github/license/coltondick/nordic-theme-main?style=for-the-badge)](https://github.com/coltondick/nordic-theme-main/blob/main/LICENSE) [![GitHub stars](https://img.shields.io/github/stars/coltondick/nordic-theme-main?style=for-the-badge)](https://github.com/coltondick/nordic-theme-main/stargazers) [![Linkedin](https://img.shields.io/badge/LinkedIn-2E3440?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/coltdi)
 
 </div>
 
