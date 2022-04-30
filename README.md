@@ -9,7 +9,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/coltondick/home-assistant-config">
-    <img src="images/logo.gif" alt="Logo">
+    <img src="https://raw.githubusercontent.com/wrt54g/nordic-theme-main/fix_readme_logo/images/logo.gif" alt="Logo">
   </a>
 
   <h1 align="center">Home Assistant Nordic Theme</h1>
