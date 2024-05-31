@@ -83,7 +83,7 @@ Nordic:
       # Background
       background-color: "var(--snow-light)"
       primary-background-color: "var(--background-color)"
-      background-color-2: "var(--snow-light)"
+      background-color-2: "var(--snow-dark)"
       secondary-background-color: "var(--snow-light)"
 
       # Code Editor
@@ -122,7 +122,7 @@ Nordic:
       mdc-theme-primary: "var(--accent-medium-color)"
 
       # Switch
-      switch-unchecked-color: "var(--polar-light-gray)"
+      switch-unchecked-color: "var(--snow-dark)"
       switch-checked-button-color: "var(--accent-color)"
       switch-unchecked-track-color: "var(--background-color-2)"
       switch-checked-track-color: "var(--background-color-2)"
