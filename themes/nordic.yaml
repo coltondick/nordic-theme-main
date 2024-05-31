@@ -46,6 +46,8 @@ Nordic:
   border-color: "transparent"
   ha-card-border-color: "transparent"
 
+  dark-primary-color: "var(--frost-steel-blue)"
+
   modes:
     light:
       # Text
@@ -73,7 +75,7 @@ Nordic:
       input-hover-line-color: "var(--accent-color)"
 
       # Main Colors
-      app-header-background-color: "var(--frost-cadet-blue)"
+      app-header-background-color: "var(--polar-light-gray)"
       app-header-text-color: "var(--snow-light)"
       accent-color: "var(--frost-green)"
       accent-medium-color: "var(--frost-cadet-blue)"
@@ -94,7 +96,7 @@ Nordic:
       # Card
       card-background-color: "var(--ha-card-background)"
       ha-card-background: "#ffffff"
-      ha-card-box-shadow: "3px 3px 13px -6px rgba(17,35,52,0.5)"
+      ha-card-box-shadow: "3px 3px 13px -6px rgba(17,35,52,0.2)"
 
       # Icons
       paper-item-icon-color: "var(--polar-bright-gray)"
