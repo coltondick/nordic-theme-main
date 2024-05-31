@@ -4,7 +4,7 @@
 # My Home Assistant Config files: https://github.com/coltondick/home-assistant-config
 #
 #
-Nordic:
+"Nordic Blue":
   #Aurora
   aurora-red: "#bf616a"
   aurora-blue: "#5e81ac"
@@ -75,8 +75,8 @@ Nordic:
       # Main Colors
       app-header-background-color: "var(--polar-light-gray)"
       app-header-text-color: "var(--snow-light)"
-      accent-color: "var(--frost-green)"
-      accent-medium-color: "var(--frost-cadet-blue)"
+      accent-color: "var(--frost-steel-blue)"
+      accent-medium-color: "var(--frost-sky-blue)"
 
       # Background
       background-color: "var(--snow-light)"
@@ -193,8 +193,8 @@ Nordic:
       # Main Colors
       app-header-background-color: "var(--polar-light-gray)"
       app-header-text-color: "var(--snow-light)"
-      accent-color: "var(--frost-green)"
-      accent-medium-color: "var(--frost-cadet-blue)"
+      accent-color: "var(--frost-steel-blue)"
+      accent-medium-color: "var(--frost-sky-blue)"
 
       # Background
       background-color: "var(--polar-dark-gray)"
