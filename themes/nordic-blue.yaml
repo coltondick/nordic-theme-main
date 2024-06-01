@@ -127,6 +127,7 @@
 
       # Radio Button
       paper-radio-button-checked-color: "var(--accent-color)"
+      mdc-radio-unchecked-color: "var(--secondary-text-color)"
 
       # Popups
       more-info-header-background: "var(--secondary-background-color)"
@@ -246,6 +247,7 @@
 
       # Radio Button
       paper-radio-button-checked-color: "var(--accent-color)"
+      mdc-radio-unchecked-color: "var(--secondary-text-color)"
 
       # Popups
       more-info-header-background: "var(--secondary-background-color)"
