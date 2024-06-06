@@ -61,6 +61,12 @@
   light-blue-color: "var(--aurora-blue)"
   cyan-color: "var(--aurora-blue)"
 
+  # Error
+  error-color: var(--red-color)
+  warning-color: var(--yellow-color)
+  success-color: var(--green-color)
+  info-color: var(--blue-color)
+  
   # Energy
   energy-grid-consumption-color: "var(--frost-steel-blue)"
   energy-grid-return-color: "var(--frost-cadet-blue)"
