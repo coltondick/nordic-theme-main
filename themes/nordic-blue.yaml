@@ -60,6 +60,8 @@
   purple-color: "var(--aurora-pink)"
   light-blue-color: "var(--aurora-blue)"
   cyan-color: "var(--frost-sky-blue)"
+  grey-color: "var(--polar-light-gray)"
+  black-color: "var(--polar-dark-gray)"
 
   # Error
   error-color: var(--red-color)
@@ -81,8 +83,6 @@
     light:
       # Colors
       disabled-color: "var(--snow-dark)"
-      grey-color: "var(--polar-light-gray)"
-      black-color: "var(--polar-dark-gray)"
       white-color: "#fafeff"
 
       # Text
@@ -206,8 +206,6 @@
     dark:
       # Colors
       disabled-color: "var(--polar-light-gray)"
-      grey-color: "var(--snow-dark)"
-      black-color: "var(--polar-dark-gray)"
       white-color: "var(--snow-light)"
 
       # Text
