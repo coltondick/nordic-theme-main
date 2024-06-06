@@ -62,10 +62,10 @@ Nordic:
   cyan-color: "var(--aurora-blue)"
 
   # Error
-  error-color: var(--red-color);
-  warning-color: var(--yellow-color);
-  success-color: var(--green-color);
-  info-color: var(--blue-color);
+  error-color: var(--red-color)
+  warning-color: var(--yellow-color)
+  success-color: var(--green-color)
+  info-color: var(--blue-color)
 
   # Energy
   energy-grid-consumption-color: "var(--frost-steel-blue)"
