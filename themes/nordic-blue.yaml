@@ -48,18 +48,18 @@
 
   # Colors
   red-color: "var(--aurora-red)"
-  blue-color: "var(--aurora-blue)"
+  blue-color: "var(--frost-steem-blue)"
   green-color: "var(--aurora-green)"
   yellow-color: "var(--aurora-yellow)"
   orange-color: "var(--aurora-orange)"
   pink-color: "var(--aurora-pink)"
-  amber-color: "var(--aurora-orange)"
-  deep-orange-color: "var(--aurora-orange)"
+  amber-color: "var(--frost-green)"
+  deep-orange-color: "var(--aurora-red)"
   teal-color: "var(--aurora-yellow)"
-  indigo-color: "var(--aurora-pink)"
+  indigo-color: "var(--frost-cadet-blue)"
   purple-color: "var(--aurora-pink)"
   light-blue-color: "var(--aurora-blue)"
-  cyan-color: "var(--aurora-blue)"
+  cyan-color: "var(--frost-sky-blue)"
 
   # Error
   error-color: var(--red-color)
