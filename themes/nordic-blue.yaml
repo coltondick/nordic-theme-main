@@ -48,12 +48,12 @@
 
   # Colors
   red-color: "var(--aurora-red)"
-  blue-color: "var(--frost-steem-blue)"
+  blue-color: "var(--frost-steel-blue)"
   green-color: "var(--aurora-green)"
   yellow-color: "var(--aurora-yellow)"
   orange-color: "var(--aurora-orange)"
   pink-color: "var(--aurora-pink)"
-  amber-color: "var(--frost-green)"
+  amber-color: "var(--aurora-yellow)"
   deep-orange-color: "var(--aurora-red)"
   teal-color: "var(--aurora-yellow)"
   indigo-color: "var(--frost-cadet-blue)"
@@ -79,6 +79,12 @@
 
   modes:
     light:
+      # Colors
+      disabled-color: "var(--snow-dark)"
+      grey-color: "var(--polar-light-gray)"
+      black-color: "var(--polar-dark-gray)"
+      white-color: "#fafeff"
+
       # Text
       text-color: "var(--polar-bright-gray)"
       primary-text-color: "var(--text-color)"
@@ -87,7 +93,7 @@
       secondary-text-color: "var(--polar-light-gray)"
       text-medium-light-color: "var(--polar-light-gray)"
       text-medium-color: "var(--polar-rivier-gray)"
-      disabled-text-color: "var(--snow-light)"
+      disabled-text-color: "var(--snow-dark)"
       primary-color: "var(--accent-color)"
       mdc-text-field-ink-color: "var(--text-color)"
       mdc-select-fill-color: "var(--background-color)"
@@ -198,6 +204,12 @@
       alarm-color-armed: "var(--aurora-red)"
 
     dark:
+      # Colors
+      disabled-color: "var(--polar-light-gray)"
+      grey-color: "var(--snow-dark)"
+      black-color: "var(--polar-dark-gray)"
+      white-color: "var(--snow-light)"
+
       # Text
       text-color: "var(--snow-light)"
       primary-text-color: "var(--text-color)"
@@ -206,7 +218,7 @@
       secondary-text-color: "var(--snow-medium)"
       text-medium-light-color: "var(--snow-medium)"
       text-medium-color: "var(--snow-dark)"
-      disabled-text-color: "var(--polar-dark-gray)"
+      disabled-text-color: "var(--polar-light-gray)"
       primary-color: "var(--accent-color)"
       mdc-text-field-ink-color: "var(--text-color)"
       mdc-select-fill-color: "var(--background-color)"
