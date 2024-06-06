@@ -60,7 +60,6 @@ Nordic:
   purple-color: "var(--aurora-pink)"
   light-blue-color: "var(--aurora-blue)"
   cyan-color: "var(--frost-sky-blue)"
-  grey-color: "var(--polar-light-gray)"
   black-color: "var(--polar-dark-gray)"
 
   # Error
@@ -83,6 +82,7 @@ Nordic:
     light:
       # Colors
       disabled-color: "var(--snow-dark)"
+      grey-color: "var(--polar-light-gray)"
       white-color: "#fafeff"
 
       # Text
@@ -181,6 +181,7 @@ Nordic:
       label-badge-blue: "var(--aurora-blue)"
       label-badge-green: "var(--aurora-green)"
       label-badge-yellow: "var(--aurora-yellow)"
+      label-badge-grey: "var(--polar-light-gray)"
 
       paper-input-container-focus-color: "var(--accent-color)"
 
@@ -206,6 +207,7 @@ Nordic:
     dark:
       # Colors
       disabled-color: "var(--polar-light-gray)"
+      grey-color: "var(--snow-dark)"
       white-color: "var(--snow-light)"
 
       # Text
@@ -305,6 +307,7 @@ Nordic:
       label-badge-blue: "var(--aurora-blue)"
       label-badge-green: "var(--aurora-green)"
       label-badge-yellow: "var(--aurora-yellow)"
+      label-badge-grey: "var(--polar-light-gray)"
 
       paper-input-container-focus-color: "var(--accent-color)"
 
