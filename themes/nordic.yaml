@@ -46,6 +46,31 @@ Nordic:
   border-color: "transparent"
   ha-card-border-color: "transparent"
 
+  # Colors
+  red-color: "var(--aurora-red)"
+  blue-color: "var(--aurora-blue)"
+  green-color: "var(--aurora-green)"
+  yellow-color: "var(--aurora-yellow)"
+  orange-color: "var(--aurora-orange)"
+  pink-color: "var(--aurora-pink)"
+  amber-color: "var(--aurora-orange)"
+  deep-orange-color: "var(--aurora-orange)"
+  teal-color: "var(--aurora-yellow)"
+  indigo-color: "var(--aurora-pink)"
+  purple-color: "var(--aurora-pink)"
+  light-blue-color: "var(--aurora-blue)"
+  cyan-color: "var(--aurora-blue)"
+
+  # Energy
+  energy-grid-consumption-color: "var(--frost-steel-blue)"
+  energy-grid-return-color: "var(--frost-cadet-blue)"
+  energy-solar-color: "var(--aurora-yellow)"
+  energy-non-fossil-color: "var(--aurora-green)"
+  energy-battery-out-color: "var(--aurora-red)"
+  energy-battery-in-color: "var(--aurora-pink)"
+  energy-gas-color: "var(--polar-dark-gray)"
+  energy-water-color: "var(--aurora-blue)" 
+
   modes:
     light:
       # Text
