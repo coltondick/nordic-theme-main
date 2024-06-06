@@ -63,7 +63,7 @@
 
   # Error
   error-color: var(--red-color)
-  warning-color: var(--yellow-color)
+  warning-color: var(--orange-color)
   success-color: var(--green-color)
   info-color: var(--blue-color)
   
