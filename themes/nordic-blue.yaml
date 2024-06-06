@@ -46,8 +46,45 @@
   border-color: "transparent"
   ha-card-border-color: "transparent"
 
+  # Colors
+  red-color: "var(--aurora-red)"
+  blue-color: "var(--frost-steel-blue)"
+  green-color: "var(--aurora-green)"
+  yellow-color: "var(--aurora-yellow)"
+  orange-color: "var(--aurora-orange)"
+  pink-color: "var(--aurora-pink)"
+  amber-color: "var(--aurora-yellow)"
+  deep-orange-color: "var(--aurora-red)"
+  teal-color: "var(--aurora-yellow)"
+  indigo-color: "var(--frost-cadet-blue)"
+  purple-color: "var(--aurora-pink)"
+  light-blue-color: "var(--aurora-blue)"
+  cyan-color: "var(--frost-sky-blue)"
+  grey-color: "var(--polar-light-gray)"
+  black-color: "var(--polar-dark-gray)"
+
+  # Error
+  error-color: var(--red-color)
+  warning-color: var(--orange-color)
+  success-color: var(--green-color)
+  info-color: var(--blue-color)
+  
+  # Energy
+  energy-grid-consumption-color: "var(--frost-steel-blue)"
+  energy-grid-return-color: "var(--frost-cadet-blue)"
+  energy-solar-color: "var(--aurora-yellow)"
+  energy-non-fossil-color: "var(--aurora-green)"
+  energy-battery-out-color: "var(--aurora-red)"
+  energy-battery-in-color: "var(--aurora-pink)"
+  energy-gas-color: "var(--polar-dark-gray)"
+  energy-water-color: "var(--aurora-blue)" 
+
   modes:
     light:
+      # Colors
+      disabled-color: "var(--snow-dark)"
+      white-color: "#fafeff"
+
       # Text
       text-color: "var(--polar-bright-gray)"
       primary-text-color: "var(--text-color)"
@@ -56,7 +93,7 @@
       secondary-text-color: "var(--polar-light-gray)"
       text-medium-light-color: "var(--polar-light-gray)"
       text-medium-color: "var(--polar-rivier-gray)"
-      disabled-text-color: "var(--snow-light)"
+      disabled-text-color: "var(--snow-dark)"
       primary-color: "var(--accent-color)"
       mdc-text-field-ink-color: "var(--text-color)"
       mdc-select-fill-color: "var(--background-color)"
@@ -127,6 +164,7 @@
 
       # Radio Button
       paper-radio-button-checked-color: "var(--accent-color)"
+      mdc-radio-unchecked-color: "var(--secondary-text-color)"
 
       # Popups
       more-info-header-background: "var(--secondary-background-color)"
@@ -166,6 +204,10 @@
       alarm-color-armed: "var(--aurora-red)"
 
     dark:
+      # Colors
+      disabled-color: "var(--polar-light-gray)"
+      white-color: "var(--snow-light)"
+
       # Text
       text-color: "var(--snow-light)"
       primary-text-color: "var(--text-color)"
@@ -174,7 +216,7 @@
       secondary-text-color: "var(--snow-medium)"
       text-medium-light-color: "var(--snow-medium)"
       text-medium-color: "var(--snow-dark)"
-      disabled-text-color: "var(--polar-dark-gray)"
+      disabled-text-color: "var(--polar-light-gray)"
       primary-color: "var(--accent-color)"
       mdc-text-field-ink-color: "var(--text-color)"
       mdc-select-fill-color: "var(--background-color)"
@@ -246,6 +288,7 @@
 
       # Radio Button
       paper-radio-button-checked-color: "var(--accent-color)"
+      mdc-radio-unchecked-color: "var(--secondary-text-color)"
 
       # Popups
       more-info-header-background: "var(--secondary-background-color)"
