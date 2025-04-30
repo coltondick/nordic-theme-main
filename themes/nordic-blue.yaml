@@ -5,30 +5,60 @@
 #
 #
 "Nordic Blue":
-  #Aurora
+  # Aurora
   aurora-red: "#bf616a"
+  rgb-aurora-red: "rgb(191, 97, 106)"
+
   aurora-blue: "#5e81ac"
+  rgb-aurora-blue: "rgb(94, 129, 172)"
+
   aurora-green: "#a3be8c"
+  rgb-aurora-green: "rgb(163, 190, 140)"
+
   aurora-yellow: "#ebcb8b"
+  rgb-aurora-yellow: "rgb(235, 203, 139)"
+
   aurora-orange: "#d08770"
+  rgb-aurora-orange: "rgb(208, 135, 112)"
+
   aurora-pink: "#b48ead"
+  rgb-aurora-pink: "rgb(180, 142, 173)"
 
-  #Frost
+  # Frost
   frost-green: "#8fbcbb"
+  rgb-frost-green: "rgb(143, 188, 187)"
+
   frost-sky-blue: "#88c0d0"
+  rgb-frost-sky-blue: "rgb(136, 192, 208)"
+
   frost-cadet-blue: "#81a1c1"
+  rgb-frost-cadet-blue: "rgb(129, 161, 193)"
+
   frost-steel-blue: "#5e81ac"
+  rgb-frost-steel-blue: "rgb(94, 129, 172)"
 
-  #Snow Storm
+  # Snow Storm
   snow-dark: "#d8dee9"
-  snow-medium: "#e5e9f0"
-  snow-light: "#eceff4"
+  rgb-snow-dark: "rgb(216, 222, 233)"
 
-  #Polar Night
+  snow-medium: "#e5e9f0"
+  rgb-snow-medium: "rgb(229, 233, 240)"
+
+  snow-light: "#eceff4"
+  rgb-snow-light: "rgb(236, 239, 244)"
+
+  # Polar Night
   polar-dark-gray: "#2e3440"
+  rgb-polar-dark-gray: "rgb(46, 52, 64)"
+
   polar-bright-gray: "#3B4252"
+  rgb-polar-bright-gray: "rgb(59, 66, 82)"
+
   polar-river-gray: "#434c5e"
+  rgb-polar-river-gray: "rgb(67, 76, 94)"
+
   polar-light-gray: "#4c566a"
+  rgb-polar-light-gray: "rgb(76, 86, 106)"
 
   # Fonts
   primary-font-family: "Roboto, sans-serif"
@@ -43,6 +73,7 @@
 
   # Card
   ha-card-border-radius: "5px"
+  ha-badge-border-radius: "5px"
   border-color: "transparent"
   ha-card-border-color: "transparent"
 
@@ -136,6 +167,7 @@
       # Icons
       paper-item-icon-color: "var(--polar-bright-gray)"
       paper-item-icon-active-color: "var(--aurora-yellow)"
+      default-icon-clr: "var(--text-color)"
 
       # Sidebar
       sidebar-background-color: "#fafeff"
@@ -262,6 +294,7 @@
       # Icons
       paper-item-icon-color: "var(--frost-sky-blue)"
       paper-item-icon-active-color: "var(--aurora-yellow)"
+      default-icon-clr: "var(--text-color)"
 
       # Sidebar
       sidebar-background-color: "var(--polar-bright-gray)"

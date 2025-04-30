@@ -73,6 +73,7 @@ Nordic:
 
   # Card
   ha-card-border-radius: "5px"
+  ha-badge-border-radius: "5px"
   border-color: "transparent"
   ha-card-border-color: "transparent"
 
@@ -166,6 +167,7 @@ Nordic:
       # Icons
       paper-item-icon-color: "var(--polar-bright-gray)"
       paper-item-icon-active-color: "var(--aurora-yellow)"
+      default-icon-clr: "var(--text-color)"
 
       # Sidebar
       sidebar-background-color: "#fafeff"
@@ -292,6 +294,7 @@ Nordic:
       # Icons
       paper-item-icon-color: "var(--frost-sky-blue)"
       paper-item-icon-active-color: "var(--aurora-yellow)"
+      default-icon-clr: "var(--text-color)"
 
       # Sidebar
       sidebar-background-color: "var(--polar-bright-gray)"
