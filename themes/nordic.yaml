@@ -175,7 +175,7 @@ Nordic:
       sidebar-selected-icon-color: "var(--accent-color)"
       sidebar-selected-text-color: "var(--text-color)"
       paper-listbox-background-color: "var(--sidebar-background-color)"
-      divider-color: "var(--background-color)"
+      divider-color: "var(--background-color-2)"
       light-primary-color: "var(--ha-card-background)"
 
       # Sliders
@@ -197,6 +197,9 @@ Nordic:
       # Radio Button
       paper-radio-button-checked-color: "var(--accent-color)"
       mdc-radio-unchecked-color: "var(--secondary-text-color)"
+
+      # Checkbox
+      mdc-checkbox-unchecked-color: "var(--secondary-text-color)"
 
       # Popups
       more-info-header-background: "var(--secondary-background-color)"
@@ -302,7 +305,7 @@ Nordic:
       sidebar-selected-icon-color: "var(--accent-color)"
       sidebar-selected-text-color: "var(--text-color)"
       paper-listbox-background-color: "var(--sidebar-background-color)"
-      divider-color: "var(--background-color)"
+      divider-color: "var(--background-color-2)"
       light-primary-color: "var(--ha-card-background)"
 
       # Sliders
@@ -324,6 +327,9 @@ Nordic:
       # Radio Button
       paper-radio-button-checked-color: "var(--accent-color)"
       mdc-radio-unchecked-color: "var(--secondary-text-color)"
+
+      # Checkbox
+      mdc-checkbox-unchecked-color: "var(--secondary-text-color)"
 
       # Popups
       more-info-header-background: "var(--secondary-background-color)"
