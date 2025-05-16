@@ -98,7 +98,7 @@ Nordic:
   warning-color: var(--orange-color)
   success-color: var(--green-color)
   info-color: var(--blue-color)
-  
+
   # Energy
   energy-grid-consumption-color: "var(--frost-steel-blue)"
   energy-grid-return-color: "var(--frost-cadet-blue)"
@@ -106,8 +106,8 @@ Nordic:
   energy-non-fossil-color: "var(--aurora-green)"
   energy-battery-out-color: "var(--aurora-red)"
   energy-battery-in-color: "var(--aurora-pink)"
-  energy-gas-color: "var(--polar-dark-gray)"
-  energy-water-color: "var(--aurora-blue)" 
+  energy-gas-color: "var(--aurora-orange)"
+  energy-water-color: "var(--aurora-blue)"
 
   modes:
     light:
