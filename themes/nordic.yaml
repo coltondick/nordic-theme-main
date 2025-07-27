@@ -1,9 +1,8 @@
-# Theme based on Noctis
+# Nordic Theme - Migrated to new HA token system
 # Creator: Colton @coltondick
-# Website: https://coltondick.com
-# My Home Assistant Config files: https://github.com/coltondick/home-assistant-config
-#
-#
+# Updated to remove deprecated tokens and use new CSS variables
+# Date: 2025-07-27
+
 Nordic:
   # Aurora
   aurora-red: "#bf616a"
@@ -60,16 +59,36 @@ Nordic:
   polar-light-gray: "#4c566a"
   rgb-polar-light-gray: "rgb(76, 86, 106)"
 
-  # Fonts
+  # Fonts - updated for new token system
   primary-font-family: "Roboto, sans-serif"
-  paper-font-common-base_-_font-family: "var(--primary-font-family)"
-  paper-font-common-code_-_font-family: "var(--primary-font-family)"
-  paper-font-body1_-_font-family: "var(--primary-font-family)"
-  paper-font-subhead_-_font-family: "var(--primary-font-family)"
-  paper-font-headline_-_font-family: "var(--primary-font-family)"
-  paper-font-caption_-_font-family: "var(--primary-font-family)"
-  paper-font-title_-_font-family: "var(--primary-font-family)"
-  ha-card-header-font-family: "var(--primary-font-family)"
+  ha-font-family-body: "var(--primary-font-family)"
+  ha-font-family-heading: "var(--primary-font-family)"
+  ha-font-family-code: "monospace"
+  ha-font-family-longform: "var(--primary-font-family)"
+  ha-font-smoothing: "antialiased"
+
+  ha-font-weight-light: 300
+  ha-font-weight-normal: 400
+  ha-font-weight-medium: 500
+  ha-font-weight-bold: 700
+  ha-font-weight-body: "var(--ha-font-weight-normal)"
+  ha-font-weight-heading: "var(--ha-font-weight-bold)"
+  ha-font-weight-action: "var(--ha-font-weight-medium)"
+
+  ha-font-size-scale: 1rem
+  ha-font-size-2xs: 0.625rem
+  ha-font-size-xs: 0.75rem
+  ha-font-size-s: 0.875rem
+  ha-font-size-m: 1rem
+  ha-font-size-l: 1.125rem
+  ha-font-size-xl: 1.25rem
+  ha-font-size-2xl: 1.5rem
+  ha-font-size-3xl: 1.75rem
+  ha-font-size-4xl: 2rem
+
+  ha-line-height-condensed: 1.1
+  ha-line-height-normal: 1.4
+  ha-line-height-expanded: 1.6
 
   # Card
   ha-card-border-radius: "5px"
@@ -165,8 +184,8 @@ Nordic:
       ha-card-box-shadow: "3px 3px 13px -6px rgba(17,35,52,0.2)"
 
       # Icons
-      paper-item-icon-color: "var(--polar-bright-gray)"
-      paper-item-icon-active-color: "var(--aurora-yellow)"
+      state-icon-color: "var(--polar-bright-gray)"
+      # paper-item-icon-active-color: "var(--aurora-yellow)"
       default-icon-clr: "var(--text-color)"
 
       # Sidebar
@@ -174,7 +193,7 @@ Nordic:
       sidebar-icon-color: "var(--polar-bright-gray)"
       sidebar-selected-icon-color: "var(--accent-color)"
       sidebar-selected-text-color: "var(--text-color)"
-      paper-listbox-background-color: "var(--sidebar-background-color)"
+      # paper-listbox-background-color: "var(--sidebar-background-color)"
       divider-color: "var(--background-color-2)"
       light-primary-color: "var(--ha-card-background)"
 
@@ -293,10 +312,9 @@ Nordic:
       ha-card-background: "var(--polar-bright-gray)"
       ha-card-box-shadow: "3px 3px 13px -6px rgba(17,35,52,1)"
 
-
       # Icons
-      paper-item-icon-color: "var(--frost-sky-blue)"
-      paper-item-icon-active-color: "var(--aurora-yellow)"
+      state-icon-color: "var(--frost-sky-blue)"
+      # paper-item-icon-active-color: "var(--aurora-yellow)"
       default-icon-clr: "var(--text-color)"
 
       # Sidebar
@@ -304,7 +322,7 @@ Nordic:
       sidebar-icon-color: "var(--snow-light)"
       sidebar-selected-icon-color: "var(--accent-color)"
       sidebar-selected-text-color: "var(--text-color)"
-      paper-listbox-background-color: "var(--sidebar-background-color)"
+      # paper-listbox-background-color: "var(--sidebar-background-color)"
       divider-color: "var(--background-color-2)"
       light-primary-color: "var(--ha-card-background)"
 
@@ -368,3 +386,4 @@ Nordic:
       # Alarm States
       alarm-color-disarmed: "var(--aurora-green)"
       alarm-color-armed: "var(--aurora-red)"
+
