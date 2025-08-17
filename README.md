@@ -8,9 +8,6 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/coltondick/home-assistant-config">
-    <img src="https://github.com/coltondick/nordic-theme-main/blob/main/images/logo.gif" alt="Logo">
-  </a>
 
   <h1 align="center">Home Assistant Nordic Theme</h1>
 
