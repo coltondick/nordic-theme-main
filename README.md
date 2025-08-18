@@ -100,7 +100,3 @@ points_per_hour: 0.25
 | polar-bright-gray | #3B4252    | ![](https://readme-swatches.vercel.app/3B4252) |
 | polar-river-gray  | #434c5e    | ![](https://readme-swatches.vercel.app/434c5e) |
 | polar-light-gray  | #4c566a    | ![](https://readme-swatches.vercel.app/4c566a) |
-
-### Credit
-
-- Thanks to: [aFFekopp](https://github.com/aFFekopp/noctis) for the noctis theme this is based on
