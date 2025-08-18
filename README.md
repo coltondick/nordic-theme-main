@@ -31,7 +31,6 @@
     <li><a href="#enable-theme">Enable theme</a></li>
     <li><a href="#color-options">Color Options</a></li>
     <li><a href="#color-reference">Color Reference</a></li>
-    <li><a href="#credit">Credit</a></li>
   </ol>
 </details>
 
