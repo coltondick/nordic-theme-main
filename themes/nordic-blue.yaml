@@ -1,10 +1,14 @@
-# Nordic Blue Theme - Migrated to new HA token system
+# Nordic Blue Theme
 # Creator: Colton @coltondick
-# Updated to remove deprecated tokens and use new CSS variables
-# Date: 2025-07-27
+# Updated: integrated HA palette scales, WA/brand tokens, state rules, and switch bridge (blue-accent)
+# Date: 2025-08-20
 
 "Nordic Blue":
-  # Aurora
+  card-mod-theme: Nordic Blue
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # Base Nordic palette (hex + rgb helpers)
+  # ─────────────────────────────────────────────────────────────────────────────
   aurora-red: "#bf616a"
   rgb-aurora-red: "rgb(191, 97, 106)"
 
@@ -23,7 +27,6 @@
   aurora-pink: "#b48ead"
   rgb-aurora-pink: "rgb(180, 142, 173)"
 
-  # Frost
   frost-green: "#8fbcbb"
   rgb-frost-green: "rgb(143, 188, 187)"
 
@@ -36,7 +39,6 @@
   frost-steel-blue: "#5e81ac"
   rgb-frost-steel-blue: "rgb(94, 129, 172)"
 
-  # Snow Storm
   snow-dark: "#d8dee9"
   rgb-snow-dark: "rgb(216, 222, 233)"
 
@@ -46,7 +48,6 @@
   snow-light: "#eceff4"
   rgb-snow-light: "rgb(236, 239, 244)"
 
-  # Polar Night
   polar-dark-gray: "#2e3440"
   rgb-polar-dark-gray: "rgb(46, 52, 64)"
 
@@ -59,7 +60,9 @@
   polar-light-gray: "#4c566a"
   rgb-polar-light-gray: "rgb(76, 86, 106)"
 
-  # Fonts (new token system)
+  # ─────────────────────────────────────────────────────────────────────────────
+  # Fonts
+  # ─────────────────────────────────────────────────────────────────────────────
   primary-font-family: "Roboto, sans-serif"
   ha-font-family-body: "var(--primary-font-family)"
   ha-font-family-heading: "var(--primary-font-family)"
@@ -90,13 +93,17 @@
   ha-line-height-normal: 1.4
   ha-line-height-expanded: 1.6
 
-  # Card
+  # ─────────────────────────────────────────────────────────────────────────────
+  # Card / badge radius
+  # ─────────────────────────────────────────────────────────────────────────────
   ha-card-border-radius: "5px"
   ha-badge-border-radius: "5px"
   border-color: "transparent"
   ha-card-border-color: "transparent"
 
-  # Colors
+  # ─────────────────────────────────────────────────────────────────────────────
+  # Simple color aliases
+  # ─────────────────────────────────────────────────────────────────────────────
   red-color: "var(--aurora-red)"
   blue-color: "var(--frost-steel-blue)"
   green-color: "var(--aurora-green)"
@@ -105,14 +112,14 @@
   pink-color: "var(--aurora-pink)"
   amber-color: "var(--aurora-yellow)"
   deep-orange-color: "var(--aurora-red)"
-  teal-color: "var(--aurora-yellow)"
+  teal-color: "var(--aurora-yellow)" # kept to match your default
   indigo-color: "var(--frost-cadet-blue)"
   purple-color: "var(--aurora-pink)"
   light-blue-color: "var(--aurora-blue)"
   cyan-color: "var(--frost-sky-blue)"
   black-color: "var(--polar-dark-gray)"
 
-  # Error
+  # Status / Feedback
   error-color: var(--red-color)
   warning-color: var(--orange-color)
   success-color: var(--green-color)
@@ -128,9 +135,74 @@
   energy-gas-color: "var(--aurora-orange)"
   energy-water-color: "var(--aurora-blue)"
 
+  # ─────────────────────────────────────────────────────────────────────────────
+  # Global state color defaults (used as fallbacks everywhere)
+  # ─────────────────────────────────────────────────────────────────────────────
+  state-active-color: var(--aurora-yellow)
+  state-inactive-color: var(--polar-light-gray)
+
+  # Per-domain common states
+  state-light-on-color: var(--aurora-yellow)
+  state-light-off-color: var(--frost-sky-blue)
+
+  state-switch-on-color: var(--aurora-yellow)
+  state-switch-off-color: var(--polar-light-gray)
+
+  state-input_boolean-on-color: var(--aurora-yellow)
+  state-input_boolean-off-color: var(--polar-light-gray)
+
+  state-lock-locked-color: var(--aurora-green)
+  state-lock-unlocked-color: var(--aurora-red)
+
+  state-cover-open-color: var(--aurora-pink)
+  state-cover-closed-color: var(--polar-light-gray)
+
+  state-climate-heat-color: var(--aurora-orange)
+  state-climate-cool-color: var(--frost-steel-blue)
+  state-climate-auto-color: var(--aurora-green)
+  state-climate-dry-color: var(--aurora-orange)
+  state-climate-fan_only-color: var(--frost-sky-blue)
+  state-climate-heat_cool-color: var(--aurora-yellow)
+
+  state-sun-above_horizon-color: var(--aurora-yellow)
+  state-sun-below_horizon-color: var(--frost-cadet-blue)
+
+  state-media_player-playing-color: var(--aurora-blue)
+  state-media_player-paused-color: var(--polar-light-gray)
+  state-media_player-idle-color: var(--polar-light-gray)
+
+  state-person-home-color: var(--aurora-green)
+  state-person-not_home-color: var(--frost-cadet-blue)
+
+  state-humidifier-on-color: var(--frost-steel-blue)
+  state-humidifier-off-color: var(--polar-light-gray)
+
+  state-siren-on-color: var(--aurora-red)
+  state-siren-off-color: var(--polar-light-gray)
+
+  state-vacuum-active-color: var(--frost-green)
+  state-vacuum-docked-color: var(--polar-light-gray)
+  state-vacuum-error-color: var(--aurora-red)
+
+  # Alarm panel
+  state-alarm_control_panel-disarmed-color: var(--aurora-green)
+  state-alarm_control_panel-armed_home-color: var(--aurora-red)
+  state-alarm_control_panel-armed_away-color: var(--aurora-red)
+  state-alarm_control_panel-armed_night-color: var(--aurora-red)
+  state-alarm_control_panel-armed_vacation-color: var(--aurora-red)
+  state-alarm_control_panel-arming-color: var(--aurora-orange)
+  state-alarm_control_panel-disarming-color: var(--aurora-orange)
+  state-alarm_control_panel-pending-color: var(--aurora-yellow)
+  state-alarm_control_panel-triggered-color: var(--aurora-red)
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # Modes
+  # ─────────────────────────────────────────────────────────────────────────────
   modes:
+    # ==========================================================================#
+    #                                  LIGHT                                    #
+    # ==========================================================================#
     light:
-      # Colors
       disabled-color: "var(--snow-dark)"
       grey-color: "var(--polar-light-gray)"
       white-color: "#fafeff"
@@ -142,7 +214,7 @@
       text-light-primary-color: "var(--text-color)"
       secondary-text-color: "var(--polar-light-gray)"
       text-medium-light-color: "var(--polar-light-gray)"
-      text-medium-color: "var(--polar-rivier-gray)"
+      text-medium-color: "var(--polar-river-gray)" # fixed typo
       disabled-text-color: "var(--snow-dark)"
       primary-color: "var(--accent-color)"
       mdc-text-field-ink-color: "var(--text-color)"
@@ -152,26 +224,26 @@
       mdc-select-idle-line-color: "var(--primary-text-color)"
       mdc-select-dropdown-icon-color: "var(--secondary-text-color)"
 
-      # Input
+      # Inputs
       input-dropdown-icon-color: "var(--secondary-text-color)"
       input-ink-color: "var(--primary-text-color)"
       input-label-ink-color: "var(--secondary-text-color)"
       input-idle-line-color: "var(--primary-text-color)"
       input-hover-line-color: "var(--accent-color)"
 
-      # Main Colors
+      # Main colors
       app-header-background-color: "var(--polar-light-gray)"
       app-header-text-color: "var(--snow-light)"
-      accent-color: "var(--frost-steel-blue)"
+      accent-color: "var(--frost-steel-blue)" # BLUE brand
       accent-medium-color: "var(--frost-sky-blue)"
 
-      # Background
+      # Backgrounds
       background-color: "var(--snow-light)"
       primary-background-color: "var(--background-color)"
       background-color-2: "var(--snow-dark)"
       secondary-background-color: "var(--snow-light)"
 
-      # Code Editor
+      # Code editor
       code-editor-gutter-color: "var(--secondary-background-color)"
       markdown-code-background-color: "var(--secondary-background-color)"
       input-fill-color: "var(--secondary-background-color)"
@@ -185,7 +257,6 @@
 
       # Icons
       state-icon-color: "var(--polar-bright-gray)"
-      # paper-item-icon-active-color: "var(--aurora-yellow)"
       default-icon-clr: "var(--text-color)"
 
       # Sidebar
@@ -193,7 +264,6 @@
       sidebar-icon-color: "var(--polar-bright-gray)"
       sidebar-selected-icon-color: "var(--accent-color)"
       sidebar-selected-text-color: "var(--text-color)"
-      # paper-listbox-background-color: "var(--sidebar-background-color)"
       divider-color: "var(--background-color-2)"
       light-primary-color: "var(--ha-card-background)"
 
@@ -203,7 +273,7 @@
       paper-slider-active-color: "var(--accent-medium-color)"
       paper-slider-container-color: "var(--background-color-2)"
 
-      # Toggle:
+      # Toggle
       paper-toggle-button-checked-bar-color: "var(--accent-medium-color)"
       mdc-theme-primary: "var(--accent-medium-color)"
 
@@ -213,7 +283,7 @@
       switch-unchecked-track-color: "var(--background-color-2)"
       switch-checked-track-color: "var(--background-color-2)"
 
-      # Radio Button
+      # Radio
       paper-radio-button-checked-color: "var(--accent-color)"
       mdc-radio-unchecked-color: "var(--secondary-text-color)"
 
@@ -222,7 +292,7 @@
 
       # Popups
       more-info-header-background: "var(--secondary-background-color)"
-      paper-dialog-background-color: "var(--background-color)" #'rgba(47,59,82,0.4)'
+      paper-dialog-background-color: "var(--background-color)"
 
       # Tables
       table-row-background-color: "var(--background-color)"
@@ -254,10 +324,100 @@
       heat-color: "var(--aurora-orange)"
       off-color: "var(--aurora-red)"
 
-      # Alarm States
+      # Alarm
       alarm-color-disarmed: "var(--aurora-green)"
       alarm-color-armed: "var(--aurora-red)"
 
+      # ── HA palette scales (light = inverted ramp)
+      ha-color-primary-05: "#e4f7f7"
+      ha-color-primary-10: "#bfe9ea"
+      ha-color-primary-20: "#86d0d2"
+      ha-color-primary-30: "#58afb3"
+      ha-color-primary-40: "#3a9196"
+      ha-color-primary-50: "#2d777c"
+      ha-color-primary-60: "#236064"
+      ha-color-primary-70: "#1a494b"
+      ha-color-primary-80: "#113436"
+      ha-color-primary-90: "#082022"
+      ha-color-primary-95: "#031415"
+
+      ha-color-neutral-05: "#000000"
+      ha-color-neutral-10: "#dfe4ea"
+      ha-color-neutral-20: "#b4bdc9"
+      ha-color-neutral-30: "#7f8a99"
+      ha-color-neutral-40: "#4c566a"
+      ha-color-neutral-50: "#434c5e"
+      ha-color-neutral-60: "#37404d"
+      ha-color-neutral-70: "#2b3440"
+      ha-color-neutral-80: "#222a34"
+      ha-color-neutral-90: "#171c23"
+      ha-color-neutral-95: "#12161d"
+
+      ha-color-red-05: "#ffedf0"
+      ha-color-red-10: "#ffd9de"
+      ha-color-red-20: "#f1b2b8"
+      ha-color-red-30: "#da838c"
+      ha-color-red-40: "#c0636d"
+      ha-color-red-50: "#a54e57"
+      ha-color-red-60: "#8a3c45"
+      ha-color-red-70: "#6a2c33"
+      ha-color-red-80: "#4a1c21"
+      ha-color-red-90: "#2e0d11"
+      ha-color-red-95: "#20070a"
+
+      ha-color-green-05: "#eafadf"
+      ha-color-green-10: "#cfeec3"
+      ha-color-green-20: "#a6d29a"
+      ha-color-green-30: "#7db16f"
+      ha-color-green-40: "#639556"
+      ha-color-green-50: "#4e7b41"
+      ha-color-green-60: "#3a6230"
+      ha-color-green-70: "#2b4a21"
+      ha-color-green-80: "#1e3416"
+      ha-color-green-90: "#12200c"
+      ha-color-green-95: "#0a1406"
+
+      ha-color-orange-05: "#ffefe7"
+      ha-color-orange-10: "#ffd9c6"
+      ha-color-orange-20: "#f3b190"
+      ha-color-orange-30: "#d88269"
+      ha-color-orange-40: "#b96548"
+      ha-color-orange-50: "#9b5034"
+      ha-color-orange-60: "#7f3f29"
+      ha-color-orange-70: "#623020"
+      ha-color-orange-80: "#452116"
+      ha-color-orange-90: "#2a130c"
+      ha-color-orange-95: "#1b0b06"
+
+      # ── WA/brand tokens + HA button fallbacks (LIGHT, BLUE)
+      wa-color-fill-loud: "var(--frost-steel-blue)"
+      wa-color-on-loud: "var(--snow-light)"
+      wa-color-border-loud: "color-mix(in srgb, var(--frost-steel-blue) 65%, var(--polar-river-gray) 35%)"
+
+      wa-color-fill-normal: "color-mix(in srgb, var(--frost-steel-blue) 20%, var(--snow-light) 80%)"
+      wa-color-on-normal: "var(--polar-bright-gray)"
+      wa-color-border-normal: "color-mix(in srgb, var(--frost-steel-blue) 40%, var(--snow-dark) 60%)"
+
+      wa-color-fill-quiet: "color-mix(in srgb, var(--frost-steel-blue) 12%, var(--snow-light) 88%)"
+      wa-color-on-quiet: "var(--polar-bright-gray)"
+      wa-color-border-quiet: "transparent"
+
+      wa-color-brand-fill-normal: "var(--wa-color-fill-normal)"
+      wa-color-brand-on-normal: "var(--wa-color-on-normal)"
+      wa-color-brand-border-normal: "var(--wa-color-border-normal)"
+
+      button-color-fill-normal-hover: "color-mix(in srgb, var(--frost-steel-blue) 24%, var(--snow-light) 76%)"
+      button-color-fill-normal-active: "color-mix(in srgb, var(--frost-steel-blue) 32%, var(--snow-medium) 68%)"
+      ha-color-fill-primary-loud-hover: "color-mix(in srgb, var(--frost-steel-blue) 90%, var(--snow-light) 10%)"
+      ha-color-fill-primary-loud-active: "color-mix(in srgb, var(--frost-steel-blue) 80%, var(--snow-medium) 20%)"
+
+      # Switch color bridge (non-breaking)
+      control-switch-on-color: "var(--state-switch-on-color,  var(--aurora-green))"
+      control-switch-off-color: "var(--state-switch-off-color, var(--polar-light-gray))"
+
+    # ==========================================================================#
+    #                                   DARK                                    #
+    # ==========================================================================#
     dark:
       # Colors
       disabled-color: "var(--polar-light-gray)"
@@ -281,26 +441,26 @@
       mdc-select-idle-line-color: "var(--primary-text-color)"
       mdc-select-dropdown-icon-color: "var(--secondary-text-color)"
 
-      # Input
+      # Inputs
       input-dropdown-icon-color: "var(--secondary-text-color)"
       input-ink-color: "var(--primary-text-color)"
       input-label-ink-color: "var(--secondary-text-color)"
       input-idle-line-color: "var(--primary-text-color)"
       input-hover-line-color: "var(--accent-color)"
 
-      # Main Colors
+      # Main colors
       app-header-background-color: "var(--polar-light-gray)"
       app-header-text-color: "var(--snow-light)"
-      accent-color: "var(--frost-steel-blue)"
+      accent-color: "var(--frost-steel-blue)" # BLUE brand
       accent-medium-color: "var(--frost-sky-blue)"
 
-      # Background
+      # Backgrounds
       background-color: "var(--polar-dark-gray)"
       primary-background-color: "var(--background-color)"
       background-color-2: "var(--polar-light-gray)"
       secondary-background-color: "var(--polar-dark-gray)"
 
-      # Code Editor
+      # Code editor
       code-editor-gutter-color: "var(--secondary-background-color)"
       markdown-code-background-color: "var(--secondary-background-color)"
       input-fill-color: "var(--secondary-background-color)"
@@ -314,7 +474,6 @@
 
       # Icons
       state-icon-color: "var(--frost-sky-blue)"
-      # paper-item-icon-active-color: "var(--aurora-yellow)"
       default-icon-clr: "var(--text-color)"
 
       # Sidebar
@@ -322,7 +481,6 @@
       sidebar-icon-color: "var(--snow-light)"
       sidebar-selected-icon-color: "var(--accent-color)"
       sidebar-selected-text-color: "var(--text-color)"
-      # paper-listbox-background-color: "var(--sidebar-background-color)"
       divider-color: "var(--background-color-2)"
       light-primary-color: "var(--ha-card-background)"
 
@@ -332,7 +490,7 @@
       paper-slider-active-color: "var(--accent-medium-color)"
       paper-slider-container-color: "var(--background-color-2)"
 
-      # Toggle:
+      # Toggle
       paper-toggle-button-checked-bar-color: "var(--accent-medium-color)"
       mdc-theme-primary: "var(--accent-medium-color)"
 
@@ -342,7 +500,7 @@
       switch-unchecked-track-color: "var(--background-color-2)"
       switch-checked-track-color: "var(--background-color-2)"
 
-      # Radio Button
+      # Radio
       paper-radio-button-checked-color: "var(--accent-color)"
       mdc-radio-unchecked-color: "var(--secondary-text-color)"
 
@@ -351,7 +509,7 @@
 
       # Popups
       more-info-header-background: "var(--secondary-background-color)"
-      paper-dialog-background-color: "var(--background-color)" #'rgba(47,59,82,0.4)'
+      paper-dialog-background-color: "var(--background-color)"
 
       # Tables
       table-row-background-color: "var(--background-color)"
@@ -383,6 +541,93 @@
       heat-color: "var(--aurora-orange)"
       off-color: "var(--aurora-red)"
 
-      # Alarm States
+      # Alarm
       alarm-color-disarmed: "var(--aurora-green)"
       alarm-color-armed: "var(--aurora-red)"
+
+      # ── HA palette scales (dark = original ramp)
+      ha-color-primary-05: "#031415"
+      ha-color-primary-10: "#082022"
+      ha-color-primary-20: "#113436"
+      ha-color-primary-30: "#1a494b"
+      ha-color-primary-40: "#236064"
+      ha-color-primary-50: "#2d777c"
+      ha-color-primary-60: "#3a9196"
+      ha-color-primary-70: "#58afb3"
+      ha-color-primary-80: "#86d0d2"
+      ha-color-primary-90: "#bfe9ea"
+      ha-color-primary-95: "#e4f7f7"
+
+      ha-color-neutral-05: "#12161d"
+      ha-color-neutral-10: "#171c23"
+      ha-color-neutral-20: "#222a34"
+      ha-color-neutral-30: "#2b3440"
+      ha-color-neutral-40: "#37404d"
+      ha-color-neutral-50: "#434c5e"
+      ha-color-neutral-60: "#4c566a"
+      ha-color-neutral-70: "#7f8a99"
+      ha-color-neutral-80: "#b4bdc9"
+      ha-color-neutral-90: "#dfe4ea"
+      ha-color-neutral-95: "#eef1f5"
+
+      ha-color-red-05: "#20070a"
+      ha-color-red-10: "#2e0d11"
+      ha-color-red-20: "#4a1c21"
+      ha-color-red-30: "#6a2c33"
+      ha-color-red-40: "#8a3c45"
+      ha-color-red-50: "#a54e57"
+      ha-color-red-60: "#c0636d"
+      ha-color-red-70: "#da838c"
+      ha-color-red-80: "#f1b2b8"
+      ha-color-red-90: "#ffd9de"
+      ha-color-red-95: "#ffedf0"
+
+      ha-color-green-05: "#0a1406"
+      ha-color-green-10: "#12200c"
+      ha-color-green-20: "#1e3416"
+      ha-color-green-30: "#2b4a21"
+      ha-color-green-40: "#3a6230"
+      ha-color-green-50: "#4e7b41"
+      ha-color-green-60: "#639556"
+      ha-color-green-70: "#7db16f"
+      ha-color-green-80: "#a6d29a"
+      ha-color-green-90: "#cfeec3"
+      ha-color-green-95: "#eafadf"
+
+      ha-color-orange-05: "#1b0b06"
+      ha-color-orange-10: "#2a130c"
+      ha-color-orange-20: "#452116"
+      ha-color-orange-30: "#623020"
+      ha-color-orange-40: "#7f3f29"
+      ha-color-orange-50: "#9b5034"
+      ha-color-orange-60: "#b96548"
+      ha-color-orange-70: "#d88269"
+      ha-color-orange-80: "#f3b190"
+      ha-color-orange-90: "#ffd9c6"
+      ha-color-orange-95: "#ffefe7"
+
+      # ── WA/brand tokens + HA button fallbacks (DARK, BLUE)
+      wa-color-fill-loud: "var(--frost-steel-blue)"
+      wa-color-on-loud: "var(--snow-light)"
+      wa-color-border-loud: "color-mix(in srgb, var(--frost-steel-blue) 70%, var(--polar-dark-gray) 30%)"
+
+      wa-color-fill-normal: "color-mix(in srgb, var(--frost-steel-blue) 24%, var(--polar-bright-gray) 76%)"
+      wa-color-on-normal: "var(--snow-light)"
+      wa-color-border-normal: "color-mix(in srgb, var(--frost-steel-blue) 45%, var(--polar-dark-gray) 55%)"
+
+      wa-color-fill-quiet: "color-mix(in srgb, var(--frost-steel-blue) 12%, var(--polar-bright-gray) 88%)"
+      wa-color-on-quiet: "var(--snow-medium)"
+      wa-color-border-quiet: "transparent"
+
+      wa-color-brand-fill-normal: "var(--wa-color-fill-normal)"
+      wa-color-brand-on-normal: "var(--wa-color-on-normal)"
+      wa-color-brand-border-normal: "var(--wa-color-border-normal)"
+
+      button-color-fill-normal-hover: "color-mix(in srgb, var(--frost-steel-blue) 28%, var(--polar-bright-gray) 72%)"
+      button-color-fill-normal-active: "color-mix(in srgb, var(--frost-steel-blue) 36%, var(--polar-river-gray) 64%)"
+      ha-color-fill-primary-loud-hover: "color-mix(in srgb, var(--frost-steel-blue) 88%, var(--polar-dark-gray) 12%)"
+      ha-color-fill-primary-loud-active: "color-mix(in srgb, var(--frost-steel-blue) 78%, var(--polar-dark-gray) 22%)"
+
+      # Switch color bridge
+      control-switch-on-color: "var(--state-switch-on-color,  var(--aurora-green))"
+      control-switch-off-color: "var(--state-switch-off-color, var(--snow-medium))"
