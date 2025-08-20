@@ -1,389 +1,793 @@
 # Nordic Theme - Migrated to new HA token system
 # Creator: Colton @coltondick
 # Updated to remove deprecated tokens and use new CSS variables
-# Date: 2025-07-27
+# Date: 2025-08-19
 
 Nordic:
-  # Aurora
+  card-mod-theme: Nordic
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # Base Nordic palette (shared)
+  # ─────────────────────────────────────────────────────────────────────────────
   aurora-red: "#bf616a"
-  rgb-aurora-red: "rgb(191, 97, 106)"
-
   aurora-blue: "#5e81ac"
-  rgb-aurora-blue: "rgb(94, 129, 172)"
-
   aurora-green: "#a3be8c"
-  rgb-aurora-green: "rgb(163, 190, 140)"
-
   aurora-yellow: "#ebcb8b"
-  rgb-aurora-yellow: "rgb(235, 203, 139)"
-
   aurora-orange: "#d08770"
-  rgb-aurora-orange: "rgb(208, 135, 112)"
-
   aurora-pink: "#b48ead"
-  rgb-aurora-pink: "rgb(180, 142, 173)"
-
-  # Frost
   frost-green: "#8fbcbb"
-  rgb-frost-green: "rgb(143, 188, 187)"
-
   frost-sky-blue: "#88c0d0"
-  rgb-frost-sky-blue: "rgb(136, 192, 208)"
-
   frost-cadet-blue: "#81a1c1"
-  rgb-frost-cadet-blue: "rgb(129, 161, 193)"
-
   frost-steel-blue: "#5e81ac"
-  rgb-frost-steel-blue: "rgb(94, 129, 172)"
-
-  # Snow Storm
   snow-dark: "#d8dee9"
-  rgb-snow-dark: "rgb(216, 222, 233)"
-
   snow-medium: "#e5e9f0"
-  rgb-snow-medium: "rgb(229, 233, 240)"
-
   snow-light: "#eceff4"
-  rgb-snow-light: "rgb(236, 239, 244)"
-
-  # Polar Night
   polar-dark-gray: "#2e3440"
-  rgb-polar-dark-gray: "rgb(46, 52, 64)"
-
   polar-bright-gray: "#3B4252"
-  rgb-polar-bright-gray: "rgb(59, 66, 82)"
-
   polar-river-gray: "#434c5e"
-  rgb-polar-river-gray: "rgb(67, 76, 94)"
-
   polar-light-gray: "#4c566a"
-  rgb-polar-light-gray: "rgb(76, 86, 106)"
 
-  # Fonts - updated for new token system
-  primary-font-family: "Roboto, sans-serif"
-  ha-font-family-body: "var(--primary-font-family)"
-  ha-font-family-heading: "var(--primary-font-family)"
-  ha-font-family-code: "monospace"
-  ha-font-family-longform: "var(--primary-font-family)"
-  ha-font-smoothing: "antialiased"
+  # ─────────────────────────────────────────────────────────────────────────────
+  # Shared sizing / typography (no colors here)
+  # ─────────────────────────────────────────────────────────────────────────────
+  token-weight-font-body: 400
+  token-weight-font-title: 600
+  token-weight-font-title-card: 600
 
-  ha-font-weight-light: 300
-  ha-font-weight-normal: 400
-  ha-font-weight-medium: 500
-  ha-font-weight-bold: 700
-  ha-font-weight-body: "var(--ha-font-weight-normal)"
-  ha-font-weight-heading: "var(--ha-font-weight-bold)"
-  ha-font-weight-action: "var(--ha-font-weight-medium)"
+  token-size-radius-small: 12px
+  token-size-radius-medium: 16px
+  token-size-radius-large: 20px
+  token-size-radius-card: 20px
+  token-size-width-border-card: 0
+  token-size-height-slider: 4px
+  token-size-height-navbar: 56px
 
-  ha-font-size-scale: 1rem
-  ha-font-size-2xs: 0.625rem
-  ha-font-size-xs: 0.75rem
-  ha-font-size-s: 0.875rem
-  ha-font-size-m: 1rem
-  ha-font-size-l: 1.125rem
-  ha-font-size-xl: 1.25rem
-  ha-font-size-2xl: 1.5rem
-  ha-font-size-3xl: 1.75rem
-  ha-font-size-4xl: 2rem
+  token-size-font-xs: calc(10px * var(--ha-font-size-scale))
+  token-size-font-s: calc(12px * var(--ha-font-size-scale))
+  token-size-font-m: calc(14px * var(--ha-font-size-scale))
+  token-size-font-l: calc(15px * var(--ha-font-size-scale))
+  token-size-font-xl: calc(20px * var(--ha-font-size-scale))
+  token-size-font-2xl: calc(24px * var(--ha-font-size-scale))
+  token-size-font-3xl: calc(28px * var(--ha-font-size-scale))
+  token-size-font-4xl: calc(32px * var(--ha-font-size-scale))
+  token-size-font-5xl: calc(40px * var(--ha-font-size-scale))
+  token-size-spacing-medium: 16px
+  token-size-section-min-width: 320px
 
-  ha-line-height-condensed: 1.1
-  ha-line-height-normal: 1.4
-  ha-line-height-expanded: 1.6
+  token-font-family-primary: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif
+  primary-font-family: var(--token-font-family-primary)
+  ha-font-family-body: var(--token-font-family-primary)
+  ha-font-family-heading: var(--token-font-family-primary)
+  ha-font-family-code: var(--token-font-family-primary)
+  ha-font-family-longform: var(--token-font-family-primary)
+  ha-card-header-font-family: var(--token-font-family-primary)
+  mdc-typography-font-family: var(--token-font-family-primary)
+  mdc-typography-button-font-family: var(--token-font-family-primary)
+  mdc-typography-body1-font-family: var(--token-font-family-primary)
+  md-list-item-label-text-font: var(--token-font-family-primary)
 
-  # Card
-  ha-card-border-radius: "5px"
-  ha-badge-border-radius: "5px"
-  border-color: "transparent"
-  ha-card-border-color: "transparent"
+  ha-font-weight-normal: var(--token-weight-font-body)
+  ha-font-weight-medium: var(--token-weight-font-title)
+  ha-font-weight-bold: var(--token-weight-font-title)
+  ha-font-weight-body: var(--token-weight-font-body)
+  ha-font-weight-heading: var(--token-weight-font-title)
+  ha-font-weight-action: var(--token-weight-font-title)
+  mdc-typography-button-font-weight: var(--token-weight-font-title)
+  title-font-weight: var(--token-weight-font-title)
 
-  # Colors
-  red-color: "var(--aurora-red)"
-  blue-color: "var(--frost-steel-blue)"
-  green-color: "var(--aurora-green)"
-  yellow-color: "var(--aurora-yellow)"
-  orange-color: "var(--aurora-orange)"
-  pink-color: "var(--aurora-pink)"
-  amber-color: "var(--aurora-yellow)"
-  deep-orange-color: "var(--aurora-red)"
-  teal-color: "var(--aurora-yellow)"
-  indigo-color: "var(--frost-cadet-blue)"
-  purple-color: "var(--aurora-pink)"
-  light-blue-color: "var(--aurora-blue)"
-  cyan-color: "var(--frost-sky-blue)"
-  black-color: "var(--polar-dark-gray)"
+  ha-font-size-xs: var(--token-size-font-xs)
+  ha-font-size-s: var(--token-size-font-s)
+  ha-font-size-m: var(--token-size-font-m)
+  ha-font-size-l: var(--token-size-font-l)
+  ha-font-size-xl: var(--token-size-font-xl)
+  ha-font-size-2xl: var(--token-size-font-2xl)
+  ha-font-size-3xl: var(--token-size-font-3xl)
+  ha-font-size-4xl: var(--token-size-font-4xl)
+  ha-font-size-5xl: var(--token-size-font-5xl)
+  title-font-size: var(--token-size-font-l)
+  ha-heading-card-title-font-size: var(--token-size-font-l)
+  ha-heading-card-title-font-weight: var(--token-weight-font-title)
+  ha-font-smoothing: antialiased
 
-  # Error
-  error-color: var(--red-color)
-  warning-color: var(--orange-color)
-  success-color: var(--green-color)
-  info-color: var(--blue-color)
+  header-height: var(--token-size-height-navbar)
+  paper-slider-height: var(--token-size-height-slider)
 
-  # Energy
-  energy-grid-consumption-color: "var(--frost-steel-blue)"
-  energy-grid-return-color: "var(--frost-cadet-blue)"
-  energy-solar-color: "var(--aurora-yellow)"
-  energy-non-fossil-color: "var(--aurora-green)"
-  energy-battery-out-color: "var(--aurora-red)"
-  energy-battery-in-color: "var(--aurora-pink)"
-  energy-gas-color: "var(--aurora-orange)"
-  energy-water-color: "var(--aurora-blue)"
-
+  # ─────────────────────────────────────────────────────────────────────────────
+  # Per-mode colors & mappings
+  # ─────────────────────────────────────────────────────────────────────────────
   modes:
+    # ==========================================================================#
+    #                                  LIGHT
+    # ==========================================================================#
     light:
-      # Colors
-      disabled-color: "var(--snow-dark)"
-      grey-color: "var(--polar-light-gray)"
-      white-color: "#fafeff"
+      # Palette ramps
+      ha-color-primary-05: "#e4f7f7"
+      ha-color-primary-10: "#bfe9ea"
+      ha-color-primary-20: "#86d0d2"
+      ha-color-primary-30: "#58afb3"
+      ha-color-primary-40: "#3a9196"
+      ha-color-primary-50: "#2d777c"
+      ha-color-primary-60: "#236064"
+      ha-color-primary-70: "#1a494b"
+      ha-color-primary-80: "#113436"
+      ha-color-primary-90: "#082022"
+      ha-color-primary-95: "#031415"
 
-      # Text
-      text-color: "var(--polar-bright-gray)"
-      primary-text-color: "var(--text-color)"
-      text-primary-color: "var(--snow-light)"
-      text-light-primary-color: "var(--text-color)"
-      secondary-text-color: "var(--polar-light-gray)"
-      text-medium-light-color: "var(--polar-light-gray)"
-      text-medium-color: "var(--polar-rivier-gray)"
-      disabled-text-color: "var(--snow-dark)"
-      primary-color: "var(--accent-color)"
-      mdc-text-field-ink-color: "var(--text-color)"
-      mdc-select-fill-color: "var(--background-color)"
-      mdc-select-ink-color: "var(--primary-text-color)"
-      mdc-select-label-ink-color: "var(--secondary-text-color)"
-      mdc-select-idle-line-color: "var(--primary-text-color)"
-      mdc-select-dropdown-icon-color: "var(--secondary-text-color)"
+      ha-color-neutral-05: "#000000"
+      ha-color-neutral-10: "#dfe4ea"
+      ha-color-neutral-20: "#b4bdc9"
+      ha-color-neutral-30: "#7f8a99"
+      ha-color-neutral-40: "#4c566a"
+      ha-color-neutral-50: "#434c5e"
+      ha-color-neutral-60: "#37404d"
+      ha-color-neutral-70: "#2b3440"
+      ha-color-neutral-80: "#222a34"
+      ha-color-neutral-90: "#171c23"
+      ha-color-neutral-95: "#12161d"
 
-      # Input
-      input-dropdown-icon-color: "var(--secondary-text-color)"
-      input-ink-color: "var(--primary-text-color)"
-      input-label-ink-color: "var(--secondary-text-color)"
-      input-idle-line-color: "var(--primary-text-color)"
-      input-hover-line-color: "var(--accent-color)"
+      ha-color-orange-05: "#ffefe7"
+      ha-color-orange-10: "#ffd9c6"
+      ha-color-orange-20: "#f3b190"
+      ha-color-orange-30: "#d88269"
+      ha-color-orange-40: "#b96548"
+      ha-color-orange-50: "#9b5034"
+      ha-color-orange-60: "#7f3f29"
+      ha-color-orange-70: "#623020"
+      ha-color-orange-80: "#452116"
+      ha-color-orange-90: "#2a130c"
+      ha-color-orange-95: "#1b0b06"
 
-      # Main Colors
-      app-header-background-color: "var(--polar-light-gray)"
-      app-header-text-color: "var(--snow-light)"
-      accent-color: "var(--frost-green)"
-      accent-medium-color: "var(--frost-cadet-blue)"
+      ha-color-red-05: "#ffedf0"
+      ha-color-red-10: "#ffd9de"
+      ha-color-red-20: "#f1b2b8"
+      ha-color-red-30: "#da838c"
+      ha-color-red-40: "#c0636d"
+      ha-color-red-50: "#a54e57"
+      ha-color-red-60: "#8a3c45"
+      ha-color-red-70: "#6a2c33"
+      ha-color-red-80: "#4a1c21"
+      ha-color-red-90: "#2e0d11"
+      ha-color-red-95: "#20070a"
 
-      # Background
-      background-color: "var(--snow-light)"
-      primary-background-color: "var(--background-color)"
-      background-color-2: "var(--snow-dark)"
-      secondary-background-color: "var(--snow-light)"
+      ha-color-green-05: "#eafadf"
+      ha-color-green-10: "#cfeec3"
+      ha-color-green-20: "#a6d29a"
+      ha-color-green-30: "#7db16f"
+      ha-color-green-40: "#639556"
+      ha-color-green-50: "#4e7b41"
+      ha-color-green-60: "#3a6230"
+      ha-color-green-70: "#2b4a21"
+      ha-color-green-80: "#1e3416"
+      ha-color-green-90: "#12200c"
+      ha-color-green-95: "#0a1406"
 
-      # Code Editor
-      code-editor-gutter-color: "var(--secondary-background-color)"
-      markdown-code-background-color: "var(--secondary-background-color)"
-      input-fill-color: "var(--secondary-background-color)"
-      codemirror-keyword: "var(--aurora-blue)"
-      codemirror-string: "var(--aurora-green)"
+      # Derived semantic colors
+      token-rgb-primary: 143, 188, 187
+      token-rgb-white: 250, 254, 255
+      token-rgb-red: 191, 97, 106
+      token-rgb-indigo: 94, 129, 172
+      token-rgb-light-blue: 136, 192, 208
+      token-rgb-green: 163, 190, 140
 
-      # Card
-      card-background-color: "var(--ha-card-background)"
-      ha-card-background: "#fafeff"
-      ha-card-box-shadow: "3px 3px 13px -6px rgba(17,35,52,0.2)"
+      token-color-primary: rgb(var(--token-rgb-primary))
+      token-color-primary-light: rgb(165, 202, 201)
+      token-color-accent: var(--token-color-primary)
+      token-color-disabled: rgb(216, 222, 233)
 
-      # Icons
-      state-icon-color: "var(--polar-bright-gray)"
-      # paper-item-icon-active-color: "var(--aurora-yellow)"
-      default-icon-clr: "var(--text-color)"
+      token-color-feedback-info: rgb(136, 192, 208)
+      token-color-feedback-warning: rgb(235, 203, 139)
+      token-color-feedback-error: rgb(191, 97, 106)
+      token-color-feedback-success: rgb(163, 190, 140)
+
+      # Text & icons
+      token-color-icon-primary: rgba(59, 66, 82, 0.87)
+      token-color-icon-secondary: rgba(76, 86, 106, 0.8)
+      token-color-text-primary: rgba(59, 66, 82, 0.95)
+      token-color-text-secondary: rgba(76, 86, 106, 0.8)
+      token-color-text-disabled: rgba(59, 66, 82, 0.38)
+
+      # Surfaces
+      token-color-background-base: rgb(236, 239, 244)
+      token-color-background-secondary: rgb(229, 233, 240)
+      token-color-background-sidebar: var(--snow-light)
+      token-color-background-input-base: rgb(255, 255, 255)
+      token-color-background-card: rgb(250, 254, 255)
+      token-color-background-divider: rgb(216, 222, 233)
+      token-shadow-card-medium: 1px 1px 1px 0 rgba(0,0,30,.18)
+
+      # Map → HA fields
+      primary-text-color: var(--token-color-text-primary)
+      secondary-text-color: var(--token-color-text-secondary)
+      text-primary-color: var(--token-color-text-primary)
+      disabled-text-color: var(--token-color-text-disabled)
+      paper-item-icon-color: var(--token-color-text-primary)
+
+      primary-color: var(--token-color-primary)
+      light-primary-color: var(--token-color-primary-light)
+      accent-color: var(--token-color-accent)
+
+      lovelace-background: var(--token-color-background-base)
+      primary-background-color: var(--token-color-background-base)
+      secondary-background-color: var(--token-color-background-secondary)
+      divider-color: var(--token-color-background-divider)
 
       # Sidebar
-      sidebar-background-color: "#fafeff"
-      sidebar-icon-color: "var(--polar-bright-gray)"
-      sidebar-selected-icon-color: "var(--accent-color)"
-      sidebar-selected-text-color: "var(--text-color)"
-      # paper-listbox-background-color: "var(--sidebar-background-color)"
-      divider-color: "var(--background-color-2)"
-      light-primary-color: "var(--ha-card-background)"
+      sidebar-background-color: var(--snow-light)
+      sidebar-text-color: var(--polar-bright-gray)
+      sidebar-icon-color: var(--polar-bright-gray)
+      sidebar-selected-text-color: var(--frost-green)
+      sidebar-selected-icon-color: var(--frost-green)
+      mdc-theme-surface: var(--snow-light)
+      mdc-theme-on-surface: var(--polar-bright-gray)
+      mdc-theme-primary: var(--frost-green)
+      app-drawer-background-color: var(--snow-light)
+      ha-sidebar-selected-bg: color-mix(in srgb, var(--frost-green) 16%, var(--snow-light))
+      ha-sidebar-hover-bg: color-mix(in srgb, var(--frost-green) 10%, transparent)
 
-      # Sliders
-      paper-slider-knob-color: "var(--accent-medium-color)"
-      paper-slider-pin-color: "var(--background-color-2)"
-      paper-slider-active-color: "var(--accent-medium-color)"
-      paper-slider-container-color: "var(--background-color-2)"
+      # Cards & layout
+      border-radius: var(--token-size-radius-card)
+      card-background-color: var(--token-color-background-card)
+      ha-card-background: var(--token-color-background-card)
+      ha-card-border-radius: var(--token-size-radius-card)
+      ha-card-border-color: rgb(224,224,224)
+      ha-card-border-width: var(--token-size-width-border-card)
+      ha-card-border-style: none
+      ha-card-box-shadow: var(--token-shadow-card-medium)
+      ha-view-sections-column-gap: var(--token-size-spacing-medium)
+      ha-view-sections-column-min-width: var(--token-size-section-min-width)
 
-      # Toggle:
-      paper-toggle-button-checked-bar-color: "var(--accent-medium-color)"
-      mdc-theme-primary: "var(--accent-medium-color)"
+      # Controls (examples retained)
+      paper-slider-knob-color: var(--token-color-primary)
+      paper-slider-active-color: var(--paper-slider-knob-color)
+      switch-checked-button-color: var(--primary-color)
+      switch-checked-track-color: var(--switch-checked-button-color)
 
-      # Switch
-      switch-unchecked-color: "var(--snow-dark)"
-      switch-checked-button-color: "var(--accent-color)"
-      switch-unchecked-track-color: "var(--background-color-2)"
-      switch-checked-track-color: "var(--background-color-2)"
+      # Buttons (brand)
+      ha-color-fill-primary-loud-hover: color-mix(in srgb, var(--frost-green) 90%, var(--polar-river-gray) 10%)
+      ha-color-fill-primary-loud-active: color-mix(in srgb, var(--frost-green) 80%, var(--polar-river-gray) 20%)
 
-      # Radio Button
-      paper-radio-button-checked-color: "var(--accent-color)"
-      mdc-radio-unchecked-color: "var(--secondary-text-color)"
+      # ────────────────────────────────────────────────────────────────────
+      # STATE COLORS — GLOBAL FALLBACKS
+      # ────────────────────────────────────────────────────────────────────
+      state-active-color: var(--aurora-yellow)
+      state-inactive-color: var(--polar-light-gray)
 
-      # Checkbox
-      mdc-checkbox-unchecked-color: "var(--secondary-text-color)"
+      # ────────────────────────────────────────────────────────────────────
+      # STATE COLORS — PER DOMAIN (on/off + active/inactive aliases)
+      # ────────────────────────────────────────────────────────────────────
 
-      # Popups
-      more-info-header-background: "var(--secondary-background-color)"
-      paper-dialog-background-color: "var(--background-color)" #'rgba(47,59,82,0.4)'
+      # Security/alerts
+      state-alarm_control_panel-on-color: var(--aurora-red)
+      state-alarm_control_panel-off-color: var(--aurora-green)
+      state-alarm_control_panel-active-color: var(--state-alarm_control_panel-on-color)
+      state-alarm_control_panel-inactive-color: var(--state-alarm_control_panel-off-color)
 
-      # Tables
-      table-row-background-color: "var(--background-color)"
-      table-row-alternative-background-color: "var(--ha-card-background)"
+      state-alert-on-color: var(--aurora-red)
+      state-alert-off-color: var(--polar-light-gray)
+      state-alert-active-color: var(--state-alert-on-color)
+      state-alert-inactive-color: var(--state-alert-off-color)
 
-      # Badges
-      label-badge-background-color: "var(--background-color)"
-      label-badge-text-color: "var(--text-primary-color)"
-      label-badge-red: "var(--aurora-red)"
-      label-badge-blue: "var(--aurora-blue)"
-      label-badge-green: "var(--aurora-green)"
-      label-badge-yellow: "var(--aurora-yellow)"
-      label-badge-grey: "var(--polar-light-gray)"
+      # Automations / scripts / schedules
+      state-automation-on-color: var(--aurora-green)
+      state-automation-off-color: var(--polar-light-gray)
+      state-automation-active-color: var(--state-automation-on-color)
+      state-automation-inactive-color: var(--state-automation-off-color)
 
-      paper-input-container-focus-color: "var(--accent-color)"
+      state-script-on-color: var(--aurora-yellow)
+      state-script-off-color: var(--polar-light-gray)
+      state-script-active-color: var(--state-script-on-color)
+      state-script-inactive-color: var(--state-script-off-color)
 
-      # Custom Header
-      ch-background: "var(--background-color)"
-      ch-active-tab-color: "var(--accent-color)"
-      ch-notification-dot-color: "var(--accent-color)"
-      ch-all-tabs-color: "var(--sidebar-icon-color)"
-      ch-tab-indicator-color: "var(--accent-color)"
+      state-schedule-on-color: var(--aurora-green)
+      state-schedule-off-color: var(--polar-light-gray)
+      state-schedule-active-color: var(--state-schedule-on-color)
+      state-schedule-inactive-color: var(--state-schedule-off-color)
 
-      # Mini Mediaplayer
-      mini-media-player-base-color: "var(--text-color)"
-      mini-media-player-accent-color: "var(--accent-color)"
+      # Binary sensors (generic + high-signal device_classes)
+      state-binary_sensor-on-color: var(--aurora-red) # detected
+      state-binary_sensor-off-color: var(--polar-light-gray)
+      state-binary_sensor-active-color: var(--state-binary_sensor-on-color)
+      state-binary_sensor-inactive-color: var(--state-binary_sensor-off-color)
 
-      # Thermostats
-      heat-color: "var(--aurora-orange)"
-      off-color: "var(--aurora-red)"
+      state-binary_sensor-battery-on-color: var(--aurora-red)
+      state-binary_sensor-carbon_monoxide-on-color: var(--aurora-red)
+      state-binary_sensor-gas-on-color: var(--aurora-red)
+      state-binary_sensor-smoke-on-color: var(--aurora-red)
+      state-binary_sensor-moisture-on-color: var(--aurora-red)
+      state-binary_sensor-problem-on-color: var(--aurora-red)
+      state-binary_sensor-safety-on-color: var(--aurora-red)
+      state-binary_sensor-tamper-on-color: var(--aurora-red)
+      state-binary_sensor-sound-on-color: var(--aurora-red)
+      state-binary_sensor-occupancy-on-color: var(--aurora-yellow)
+      state-binary_sensor-motion-on-color: var(--aurora-yellow)
+      state-binary_sensor-door-on-color: var(--aurora-yellow)
+      state-binary_sensor-window-on-color: var(--aurora-yellow)
 
-      # Alarm States
-      alarm-color-disarmed: "var(--aurora-green)"
-      alarm-color-armed: "var(--aurora-red)"
+      # Climate & comfort
+      state-climate-on-color: var(--frost-steel-blue)
+      state-climate-off-color: var(--polar-light-gray)
+      state-humidifier-on-color: var(--frost-steel-blue)
+      state-humidifier-off-color: var(--polar-light-gray)
+      state-fan-on-color: var(--frost-sky-blue)
+      state-fan-off-color: var(--polar-light-gray)
 
+      # Home devices
+      state-light-on-color: var(--aurora-yellow)
+      state-light-off-color: var(--polar-light-gray)
+      state-switch-on-color: var(--aurora-green)
+      state-switch-off-color: var(--polar-light-gray)
+      state-input_boolean-on-color: var(--aurora-green)
+      state-input_boolean-off-color: var(--polar-light-gray)
+      state-cover-on-color: var(--aurora-pink)
+      state-cover-off-color: var(--polar-light-gray)
+      state-lock-on-color: var(--aurora-green) # locked
+      state-lock-off-color: var(--aurora-red) # unlocked
+
+      # Media / people / tracking
+      state-media_player-on-color: var(--aurora-blue)
+      state-media_player-off-color: var(--polar-light-gray)
+      state-person-on-color: var(--aurora-green) # home
+      state-person-off-color: var(--frost-steel-blue) # away
+      state-device_tracker-on-color: var(--aurora-green) # home
+      state-device_tracker-off-color: var(--frost-steel-blue) # away
+
+      # Misc domains
+      state-camera-on-color: var(--aurora-blue)
+      state-camera-off-color: var(--polar-light-gray)
+      state-group-on-color: var(--aurora-green)
+      state-group-off-color: var(--polar-light-gray)
+      state-remote-on-color: var(--frost-cadet-blue)
+      state-remote-off-color: var(--polar-light-gray)
+      state-plant-on-color: var(--aurora-red) # problem
+      state-plant-off-color: var(--aurora-green) # ok
+      state-siren-on-color: var(--aurora-red)
+      state-siren-off-color: var(--polar-light-gray)
+      state-sun-on-color: var(--aurora-yellow) # above horizon
+      state-sun-off-color: var(--frost-cadet-blue)
+      state-timer-on-color: var(--aurora-yellow)
+      state-timer-off-color: var(--polar-light-gray)
+      state-update-on-color: var(--aurora-orange)
+      state-update-off-color: var(--polar-light-gray)
+      state-vacuum-on-color: var(--frost-green)
+      state-vacuum-off-color: var(--polar-light-gray)
+
+      # Provide active/inactive aliases for every domain above
+      state-camera-active-color: var(--state-camera-on-color)
+      state-camera-inactive-color: var(--state-camera-off-color)
+      state-climate-active-color: var(--state-climate-on-color)
+      state-climate-inactive-color: var(--state-climate-off-color)
+      state-cover-active-color: var(--state-cover-on-color)
+      state-cover-inactive-color: var(--state-cover-off-color)
+      state-device_tracker-active-color: var(--state-device_tracker-on-color)
+      state-device_tracker-inactive-color: var(--state-device_tracker-off-color)
+      state-fan-active-color: var(--state-fan-on-color)
+      state-fan-inactive-color: var(--state-fan-off-color)
+      state-group-active-color: var(--state-group-on-color)
+      state-group-inactive-color: var(--state-group-off-color)
+      state-humidifier-active-color: var(--state-humidifier-on-color)
+      state-humidifier-inactive-color: var(--state-humidifier-off-color)
+      state-input_boolean-active-color: var(--state-input_boolean-on-color)
+      state-input_boolean-inactive-color: var(--state-input_boolean-off-color)
+      state-light-active-color: var(--state-light-on-color)
+      state-light-inactive-color: var(--state-light-off-color)
+      state-lock-active-color: var(--state-lock-on-color)
+      state-lock-inactive-color: var(--state-lock-off-color)
+      state-media_player-active-color: var(--state-media_player-on-color)
+      state-media_player-inactive-color: var(--state-media_player-off-color)
+      state-person-active-color: var(--state-person-on-color)
+      state-person-inactive-color: var(--state-person-off-color)
+      state-plant-active-color: var(--state-plant-on-color)
+      state-plant-inactive-color: var(--state-plant-off-color)
+      state-remote-active-color: var(--state-remote-on-color)
+      state-remote-inactive-color: var(--state-remote-off-color)
+      state-siren-active-color: var(--state-siren-on-color)
+      state-siren-inactive-color: var(--state-siren-off-color)
+      state-sun-active-color: var(--state-sun-on-color)
+      state-sun-inactive-color: var(--state-sun-off-color)
+      state-switch-active-color: var(--state-switch-on-color)
+      state-switch-inactive-color: var(--state-switch-off-color)
+      state-timer-active-color: var(--state-timer-on-color)
+      state-timer-inactive-color: var(--state-timer-off-color)
+      state-update-active-color: var(--state-update-on-color)
+      state-update-inactive-color: var(--state-update-off-color)
+      state-vacuum-active-color: var(--state-vacuum-on-color)
+      state-vacuum-inactive-color: var(--state-vacuum-off-color)
+
+      # Covers / locks / valves
+      state-cover-open-color: var(--aurora-yellow)
+      state-cover-opening-color: var(--aurora-orange)
+      state-cover-closed-color: var(--polar-light-gray)
+      state-cover-closing-color: var(--aurora-orange)
+      state-cover-stopped-color: var(--frost-cadet-blue)
+
+      state-lock-locked-color: var(--aurora-green)
+      state-lock-unlocked-color: var(--aurora-red)
+      state-lock-locking-color: var(--aurora-orange)
+      state-lock-unlocking-color: var(--aurora-orange)
+      state-lock-jammed-color: var(--aurora-red)
+      state-lock-open-color: var(--aurora-red)
+
+      state-valve-open-color: var(--aurora-green)
+      state-valve-opening-color: var(--aurora-orange)
+      state-valve-closed-color: var(--polar-light-gray)
+      state-valve-closing-color: var(--aurora-orange)
+
+      # Media / timer / vacuum / camera
+      state-media_player-playing-color: var(--aurora-blue)
+      state-media_player-paused-color: var(--frost-cadet-blue)
+      state-media_player-idle-color: var(--polar-light-gray)
+      state-media_player-standby-color: var(--polar-light-gray)
+      state-media_player-buffering-color: var(--aurora-yellow)
+
+      state-timer-paused-color: var(--aurora-orange)
+      state-timer-idle-color: var(--polar-light-gray)
+
+      state-vacuum-cleaning-color: var(--frost-green)
+      state-vacuum-returning-color: var(--frost-steel-blue)
+      state-vacuum-docked-color: var(--frost-cadet-blue)
+      state-vacuum-paused-color: var(--aurora-orange)
+      state-vacuum-idle-color: var(--polar-light-gray)
+      state-vacuum-error-color: var(--aurora-red)
+
+      state-camera-recording-color: var(--aurora-red)
+      state-camera-streaming-color: var(--aurora-blue)
+      state-camera-idle-color: var(--polar-light-gray)
+
+      # People / tracking
+      state-person-home-color: var(--aurora-green)
+      state-person-not_home-color: var(--frost-steel-blue)
+      state-device_tracker-home-color: var(--aurora-green)
+      state-device_tracker-not_home-color: var(--frost-steel-blue)
+
+      # Scripts / updates / calendar / water heater
+      state-script-running-color: var(--aurora-yellow)
+      state-script-queued-color: var(--aurora-orange)
+
+      state-update-installing-color: var(--aurora-orange)
+
+      state-calendar-on-color: var(--frost-green)
+      state-calendar-off-color: var(--polar-light-gray)
+
+      state-water_heater-off-color: var(--polar-light-gray)
+
+    # ==========================================================================#
+    #                                   DARK
+    # ==========================================================================#
     dark:
-      # Colors
-      disabled-color: "var(--polar-light-gray)"
-      grey-color: "var(--snow-dark)"
-      white-color: "var(--snow-light)"
+      # Palette ramps (Nordic original ramp)
+      ha-color-primary-05: "#031415"
+      ha-color-primary-10: "#082022"
+      ha-color-primary-20: "#113436"
+      ha-color-primary-30: "#1a494b"
+      ha-color-primary-40: "#236064"
+      ha-color-primary-50: "#2d777c"
+      ha-color-primary-60: "#3a9196"
+      ha-color-primary-70: "#58afb3"
+      ha-color-primary-80: "#86d0d2"
+      ha-color-primary-90: "#bfe9ea"
+      ha-color-primary-95: "#e4f7f7"
 
-      # Text
-      text-color: "var(--snow-light)"
-      primary-text-color: "var(--text-color)"
-      text-primary-color: "var(--text-color)"
-      text-light-primary-color: "var(--text-color)"
-      secondary-text-color: "var(--snow-medium)"
-      text-medium-light-color: "var(--snow-medium)"
-      text-medium-color: "var(--snow-dark)"
-      disabled-text-color: "var(--polar-light-gray)"
-      primary-color: "var(--accent-color)"
-      mdc-text-field-ink-color: "var(--text-color)"
-      mdc-select-fill-color: "var(--background-color)"
-      mdc-select-ink-color: "var(--primary-text-color)"
-      mdc-select-label-ink-color: "var(--secondary-text-color)"
-      mdc-select-idle-line-color: "var(--primary-text-color)"
-      mdc-select-dropdown-icon-color: "var(--secondary-text-color)"
+      ha-color-neutral-05: "#12161d"
+      ha-color-neutral-10: "#171c23"
+      ha-color-neutral-20: "#222a34"
+      ha-color-neutral-30: "#2b3440"
+      ha-color-neutral-40: "#37404d"
+      ha-color-neutral-50: "#434c5e"
+      ha-color-neutral-60: "#4c566a"
+      ha-color-neutral-70: "#7f8a99"
+      ha-color-neutral-80: "#b4bdc9"
+      ha-color-neutral-90: "#dfe4ea"
+      ha-color-neutral-95: "#eef1f5"
 
-      # Input
-      input-dropdown-icon-color: "var(--secondary-text-color)"
-      input-ink-color: "var(--primary-text-color)"
-      input-label-ink-color: "var(--secondary-text-color)"
-      input-idle-line-color: "var(--primary-text-color)"
-      input-hover-line-color: "var(--accent-color)"
+      ha-color-orange-05: "#1b0b06"
+      ha-color-orange-10: "#2a130c"
+      ha-color-orange-20: "#452116"
+      ha-color-orange-30: "#623020"
+      ha-color-orange-40: "#7f3f29"
+      ha-color-orange-50: "#9b5034"
+      ha-color-orange-60: "#b96548"
+      ha-color-orange-70: "#d88269"
+      ha-color-orange-80: "#f3b190"
+      ha-color-orange-90: "#ffd9c6"
+      ha-color-orange-95: "#ffefe7"
 
-      # Main Colors
-      app-header-background-color: "var(--polar-light-gray)"
-      app-header-text-color: "var(--snow-light)"
-      accent-color: "var(--frost-green)"
-      accent-medium-color: "var(--frost-cadet-blue)"
+      ha-color-red-05: "#20070a"
+      ha-color-red-10: "#2e0d11"
+      ha-color-red-20: "#4a1c21"
+      ha-color-red-30: "#6a2c33"
+      ha-color-red-40: "#8a3c45"
+      ha-color-red-50: "#a54e57"
+      ha-color-red-60: "#c0636d"
+      ha-color-red-70: "#da838c"
+      ha-color-red-80: "#f1b2b8"
+      ha-color-red-90: "#ffd9de"
+      ha-color-red-95: "#ffedf0"
 
-      # Background
-      background-color: "var(--polar-dark-gray)"
-      primary-background-color: "var(--background-color)"
-      background-color-2: "var(--polar-light-gray)"
-      secondary-background-color: "var(--polar-dark-gray)"
+      ha-color-green-05: "#0a1406"
+      ha-color-green-10: "#12200c"
+      ha-color-green-20: "#1e3416"
+      ha-color-green-30: "#2b4a21"
+      ha-color-green-40: "#3a6230"
+      ha-color-green-50: "#4e7b41"
+      ha-color-green-60: "#639556"
+      ha-color-green-70: "#7db16f"
+      ha-color-green-80: "#a6d29a"
+      ha-color-green-90: "#cfeec3"
+      ha-color-green-95: "#eafadf"
 
-      # Code Editor
-      code-editor-gutter-color: "var(--secondary-background-color)"
-      markdown-code-background-color: "var(--secondary-background-color)"
-      input-fill-color: "var(--secondary-background-color)"
-      codemirror-keyword: "var(--aurora-blue)"
-      codemirror-string: "var(--aurora-green)"
+      # Derived semantic colors
+      token-rgb-primary: 143,188,187
+      token-rgb-white: 236,239,244
+      token-rgb-green: 163,190,140
+      token-rgb-light-blue: 136,192,208
 
-      # Card
-      card-background-color: "var(--ha-card-background)"
-      ha-card-background: "var(--polar-bright-gray)"
-      ha-card-box-shadow: "3px 3px 13px -6px rgba(17,35,52,1)"
+      token-color-primary: rgb(var(--token-rgb-primary))
+      token-color-primary-light: rgb(105,124,144)
+      token-color-accent: var(--token-color-primary)
+      token-color-disabled: rgb(0, 0, 0)
 
-      # Icons
-      state-icon-color: "var(--frost-sky-blue)"
-      # paper-item-icon-active-color: "var(--aurora-yellow)"
-      default-icon-clr: "var(--text-color)"
+      token-color-feedback-info: rgb(136, 192, 208)
+      token-color-feedback-warning: rgb(235, 203, 139)
+      token-color-feedback-error: rgb(191, 97, 106)
+      token-color-feedback-success: rgb(163, 190, 140)
+
+      # Text & icons
+      token-color-icon-primary: rgb(236, 239, 244)
+      token-color-icon-secondary: rgb(229, 233, 240)
+      token-color-text-primary: rgb(236, 239, 244)
+      token-color-text-secondary: rgb(229, 233, 240)
+      token-color-text-disabled: rgba(255,255,255,.5)
+
+      # Surfaces
+      token-color-background-base: rgb(46, 52, 64)
+      token-color-background-secondary: rgb(59, 66, 82)
+      token-color-background-sidebar: var(--token-color-background-base)
+      token-color-background-input-base: rgb(67, 76, 94)
+      token-color-background-card: rgb(59, 66, 82)
+      token-color-background-divider: var(--token-color-background-sidebar)
+      token-shadow-card-medium: 0 3px 8px 0 rgba(0,0,0,.12)
+
+      # Map → HA fields
+      primary-text-color: var(--token-color-text-primary)
+      secondary-text-color: var(--token-color-text-secondary)
+      text-primary-color: var(--token-color-text-primary)
+      disabled-text-color: var(--token-color-text-disabled)
+      paper-item-icon-color: var(--token-color-text-primary)
+
+      primary-color: var(--token-color-primary)
+      light-primary-color: var(--token-color-primary-light)
+      accent-color: var(--token-color-accent)
+
+      lovelace-background: var(--token-color-background-base)
+      primary-background-color: var(--token-color-background-base)
+      secondary-background-color: var(--token-color-background-secondary)
+      divider-color: var(--token-color-background-divider)
 
       # Sidebar
-      sidebar-background-color: "var(--polar-bright-gray)"
-      sidebar-icon-color: "var(--snow-light)"
-      sidebar-selected-icon-color: "var(--accent-color)"
-      sidebar-selected-text-color: "var(--text-color)"
-      # paper-listbox-background-color: "var(--sidebar-background-color)"
-      divider-color: "var(--background-color-2)"
-      light-primary-color: "var(--ha-card-background)"
+      sidebar-background-color: var(--polar-bright-gray)
+      sidebar-text-color: var(--snow-light)
+      sidebar-icon-color: var(--snow-light)
+      sidebar-selected-text-color: var(--frost-green)
+      sidebar-selected-icon-color: var(--frost-green)
+      mdc-theme-surface: var(--polar-bright-gray)
+      mdc-theme-on-surface: var(--snow-light)
+      mdc-theme-primary: var(--frost-green)
+      app-drawer-background-color: var(--polar-bright-gray)
+      ha-sidebar-selected-bg: color-mix(in srgb, var(--frost-green) 18%, var(--polar-bright-gray))
+      ha-sidebar-hover-bg: color-mix(in srgb, var(--frost-green) 10%, transparent)
 
-      # Sliders
-      paper-slider-knob-color: "var(--accent-medium-color)"
-      paper-slider-pin-color: "var(--background-color-2)"
-      paper-slider-active-color: "var(--accent-medium-color)"
-      paper-slider-container-color: "var(--background-color-2)"
+      # Cards & layout
+      border-radius: var(--token-size-radius-card)
+      card-background-color: var(--token-color-background-card)
+      ha-card-background: var(--token-color-background-card)
+      ha-card-border-radius: var(--token-size-radius-card)
+      ha-card-border-color: rgba(0,0,0,0)
+      ha-card-border-width: var(--token-size-width-border-card)
+      ha-card-border-style: none
+      ha-card-box-shadow: var(--token-shadow-card-medium)
+      ha-view-sections-column-gap: var(--token-size-spacing-medium)
+      ha-view-sections-column-min-width: var(--token-size-section-min-width)
 
-      # Toggle:
-      paper-toggle-button-checked-bar-color: "var(--accent-medium-color)"
-      mdc-theme-primary: "var(--accent-medium-color)"
+      # Controls (examples retained)
+      paper-slider-knob-color: var(--token-color-primary)
+      paper-slider-active-color: var(--paper-slider-knob-color)
+      switch-checked-button-color: var(--primary-color)
+      switch-checked-track-color: var(--switch-checked-button-color)
 
-      # Switch
-      switch-unchecked-color: "var(--snow-light)"
-      switch-checked-button-color: "var(--accent-color)"
-      switch-unchecked-track-color: "var(--background-color-2)"
-      switch-checked-track-color: "var(--background-color-2)"
+      # Buttons (brand)
+      ha-color-fill-primary-loud-hover: color-mix(in srgb, var(--frost-green) 88%, var(--polar-dark-gray) 12%)
+      ha-color-fill-primary-loud-active: color-mix(in srgb, var(--frost-green) 78%, var(--polar-dark-gray) 22%)
 
-      # Radio Button
-      paper-radio-button-checked-color: "var(--accent-color)"
-      mdc-radio-unchecked-color: "var(--secondary-text-color)"
+      # ────────────────────────────────────────────────────────────────────
+      # STATE COLORS — GLOBAL FALLBACKS
+      # ────────────────────────────────────────────────────────────────────
+      state-active-color: var(--aurora-yellow)
+      state-inactive-color: var(--snow-medium)
 
-      # Checkbox
-      mdc-checkbox-unchecked-color: "var(--secondary-text-color)"
+      # ────────────────────────────────────────────────────────────────────
+      # STATE COLORS — PER DOMAIN (on/off + active/inactive aliases)
+      # ────────────────────────────────────────────────────────────────────
 
-      # Popups
-      more-info-header-background: "var(--secondary-background-color)"
-      paper-dialog-background-color: "var(--background-color)" #'rgba(47,59,82,0.4)'
+      state-alarm_control_panel-on-color: var(--aurora-red)
+      state-alarm_control_panel-off-color: var(--aurora-green)
+      state-alarm_control_panel-active-color: var(--state-alarm_control_panel-on-color)
+      state-alarm_control_panel-inactive-color: var(--state-alarm_control_panel-off-color)
 
-      # Tables
-      table-row-background-color: "var(--background-color)"
-      table-row-alternative-background-color: "var(--ha-card-background)"
+      state-alert-on-color: var(--aurora-red)
+      state-alert-off-color: var(--snow-medium)
 
-      # Badges
-      label-badge-background-color: "var(--background-color)"
-      label-badge-text-color: "var(--text-primary-color)"
-      label-badge-red: "var(--aurora-red)"
-      label-badge-blue: "var(--aurora-blue)"
-      label-badge-green: "var(--aurora-green)"
-      label-badge-yellow: "var(--aurora-yellow)"
-      label-badge-grey: "var(--polar-light-gray)"
+      state-automation-on-color: var(--aurora-green)
+      state-automation-off-color: var(--snow-medium)
 
-      paper-input-container-focus-color: "var(--accent-color)"
+      state-script-on-color: var(--aurora-yellow)
+      state-script-off-color: var(--snow-medium)
 
-      # Custom Header
-      ch-background: "var(--background-color)"
-      ch-active-tab-color: "var(--accent-color)"
-      ch-notification-dot-color: "var(--accent-color)"
-      ch-all-tabs-color: "var(--sidebar-icon-color)"
-      ch-tab-indicator-color: "var(--accent-color)"
+      state-schedule-on-color: var(--aurora-green)
+      state-schedule-off-color: var(--snow-medium)
 
-      # Mini Mediaplayer
-      mini-media-player-base-color: "var(--text-color)"
-      mini-media-player-accent-color: "var(--accent-color)"
+      state-binary_sensor-on-color: var(--aurora-red)
+      state-binary_sensor-off-color: var(--snow-medium)
+      state-binary_sensor-battery-on-color: var(--aurora-red)
+      state-binary_sensor-carbon_monoxide-on-color: var(--aurora-red)
+      state-binary_sensor-gas-on-color: var(--aurora-red)
+      state-binary_sensor-smoke-on-color: var(--aurora-red)
+      state-binary_sensor-moisture-on-color: var(--aurora-red)
+      state-binary_sensor-problem-on-color: var(--aurora-red)
+      state-binary_sensor-safety-on-color: var(--aurora-red)
+      state-binary_sensor-tamper-on-color: var(--aurora-red)
+      state-binary_sensor-sound-on-color: var(--aurora-red)
+      state-binary_sensor-occupancy-on-color: var(--aurora-yellow)
+      state-binary_sensor-motion-on-color: var(--aurora-yellow)
+      state-binary_sensor-door-on-color: var(--aurora-yellow)
+      state-binary_sensor-window-on-color: var(--aurora-yellow)
 
-      # Thermostats
-      heat-color: "var(--aurora-orange)"
-      off-color: "var(--aurora-red)"
+      state-climate-on-color: var(--frost-steel-blue)
+      state-climate-off-color: var(--snow-medium)
+      state-humidifier-on-color: var(--frost-steel-blue)
+      state-humidifier-off-color: var(--snow-medium)
+      state-fan-on-color: var(--frost-sky-blue)
+      state-fan-off-color: var(--snow-medium)
 
-      # Alarm States
-      alarm-color-disarmed: "var(--aurora-green)"
-      alarm-color-armed: "var(--aurora-red)"
+      state-light-on-color: var(--aurora-yellow)
+      state-light-off-color: var(--snow-medium)
+      state-switch-on-color: var(--aurora-green)
+      state-switch-off-color: var(--snow-medium)
+      state-input_boolean-on-color: var(--aurora-green)
+      state-input_boolean-off-color: var(--snow-medium)
+      state-cover-on-color: var(--aurora-pink)
+      state-cover-off-color: var(--snow-medium)
+      state-lock-on-color: var(--aurora-green)
+      state-lock-off-color: var(--aurora-red)
 
+      state-media_player-on-color: var(--aurora-blue)
+      state-media_player-off-color: var(--snow-medium)
+      state-person-on-color: var(--aurora-green)
+      state-person-off-color: var(--frost-steel-blue)
+      state-device_tracker-on-color: var(--aurora-green)
+      state-device_tracker-off-color: var(--frost-steel-blue)
+
+      state-camera-on-color: var(--aurora-blue)
+      state-camera-off-color: var(--snow-medium)
+      state-group-on-color: var(--aurora-green)
+      state-group-off-color: var(--snow-medium)
+      state-remote-on-color: var(--frost-cadet-blue)
+      state-remote-off-color: var(--snow-medium)
+      state-plant-on-color: var(--aurora-red)
+      state-plant-off-color: var(--aurora-green)
+      state-siren-on-color: var(--aurora-red)
+      state-siren-off-color: var(--snow-medium)
+      state-sun-on-color: var(--aurora-yellow)
+      state-sun-off-color: var(--frost-cadet-blue)
+      state-timer-on-color: var(--aurora-yellow)
+      state-timer-off-color: var(--snow-medium)
+      state-update-on-color: var(--aurora-orange)
+      state-update-off-color: var(--snow-medium)
+      state-vacuum-on-color: var(--frost-green)
+      state-vacuum-off-color: var(--snow-medium)
+
+      # Aliases
+      state-automation-active-color: var(--state-automation-on-color)
+      state-automation-inactive-color: var(--state-automation-off-color)
+      state-binary_sensor-active-color: var(--state-binary_sensor-on-color)
+      state-binary_sensor-inactive-color: var(--state-binary_sensor-off-color)
+      state-camera-active-color: var(--state-camera-on-color)
+      state-camera-inactive-color: var(--state-camera-off-color)
+      state-climate-active-color: var(--state-climate-on-color)
+      state-climate-inactive-color: var(--state-climate-off-color)
+      state-cover-active-color: var(--state-cover-on-color)
+      state-cover-inactive-color: var(--state-cover-off-color)
+      state-device_tracker-active-color: var(--state-device_tracker-on-color)
+      state-device_tracker-inactive-color: var(--state-device_tracker-off-color)
+      state-fan-active-color: var(--state-fan-on-color)
+      state-fan-inactive-color: var(--state-fan-off-color)
+      state-group-active-color: var(--state-group-on-color)
+      state-group-inactive-color: var(--state-group-off-color)
+      state-humidifier-active-color: var(--state-humidifier-on-color)
+      state-humidifier-inactive-color: var(--state-humidifier-off-color)
+      state-input_boolean-active-color: var(--state-input_boolean-on-color)
+      state-input_boolean-inactive-color: var(--state-input_boolean-off-color)
+      state-light-active-color: var(--state-light-on-color)
+      state-light-inactive-color: var(--state-light-off-color)
+      state-lock-active-color: var(--state-lock-on-color)
+      state-lock-inactive-color: var(--state-lock-off-color)
+      state-media_player-active-color: var(--state-media_player-on-color)
+      state-media_player-inactive-color: var(--state-media_player-off-color)
+      state-person-active-color: var(--state-person-on-color)
+      state-person-inactive-color: var(--state-person-off-color)
+      state-plant-active-color: var(--state-plant-on-color)
+      state-plant-inactive-color: var(--state-plant-off-color)
+      state-remote-active-color: var(--state-remote-on-color)
+      state-remote-inactive-color: var(--state-remote-off-color)
+      state-schedule-active-color: var(--state-schedule-on-color)
+      state-schedule-inactive-color: var(--state-schedule-off-color)
+      state-script-active-color: var(--state-script-on-color)
+      state-script-inactive-color: var(--state-script-off-color)
+      state-siren-active-color: var(--state-siren-on-color)
+      state-siren-inactive-color: var(--state-siren-off-color)
+      state-sun-active-color: var(--state-sun-on-color)
+      state-sun-inactive-color: var(--state-sun-off-color)
+      state-switch-active-color: var(--state-switch-on-color)
+      state-switch-inactive-color: var(--state-switch-off-color)
+      state-timer-active-color: var(--state-timer-on-color)
+      state-timer-inactive-color: var(--state-timer-off-color)
+      state-update-active-color: var(--state-update-on-color)
+      state-update-inactive-color: var(--state-update-off-color)
+      state-vacuum-active-color: var(--state-vacuum-on-color)
+      state-vacuum-inactive-color: var(--state-vacuum-off-color)
+
+      # Covers / locks / valves
+      state-cover-open-color: var(--aurora-yellow)
+      state-cover-opening-color: var(--aurora-orange)
+      state-cover-closed-color: var(--polar-light-gray)
+      state-cover-closing-color: var(--aurora-orange)
+      state-cover-stopped-color: var(--frost-cadet-blue)
+
+      state-lock-locked-color: var(--aurora-green)
+      state-lock-unlocked-color: var(--aurora-red)
+      state-lock-locking-color: var(--aurora-orange)
+      state-lock-unlocking-color: var(--aurora-orange)
+      state-lock-jammed-color: var(--aurora-red)
+      state-lock-open-color: var(--aurora-red)
+
+      state-valve-open-color: var(--aurora-green)
+      state-valve-opening-color: var(--aurora-orange)
+      state-valve-closed-color: var(--polar-light-gray)
+      state-valve-closing-color: var(--aurora-orange)
+
+      # Media / timer / vacuum / camera
+      state-media_player-playing-color: var(--aurora-blue)
+      state-media_player-paused-color: var(--frost-cadet-blue)
+      state-media_player-idle-color: var(--polar-light-gray)
+      state-media_player-standby-color: var(--polar-light-gray)
+      state-media_player-buffering-color: var(--aurora-yellow)
+
+      state-timer-paused-color: var(--aurora-orange)
+      state-timer-idle-color: var(--polar-light-gray)
+
+      state-vacuum-cleaning-color: var(--frost-green)
+      state-vacuum-returning-color: var(--frost-steel-blue)
+      state-vacuum-docked-color: var(--frost-cadet-blue)
+      state-vacuum-paused-color: var(--aurora-orange)
+      state-vacuum-idle-color: var(--polar-light-gray)
+      state-vacuum-error-color: var(--aurora-red)
+
+      state-camera-recording-color: var(--aurora-red)
+      state-camera-streaming-color: var(--aurora-blue)
+      state-camera-idle-color: var(--polar-light-gray)
+
+      # People / tracking
+      state-person-home-color: var(--aurora-green)
+      state-person-not_home-color: var(--frost-steel-blue)
+      state-device_tracker-home-color: var(--aurora-green)
+      state-device_tracker-not_home-color: var(--frost-steel-blue)
+
+      # Scripts / updates / calendar / water heater
+      state-script-running-color: var(--aurora-yellow)
+      state-script-queued-color: var(--aurora-orange)
+
+      state-update-installing-color: var(--aurora-orange)
+
+      state-calendar-on-color: var(--frost-green)
+      state-calendar-off-color: var(--polar-light-gray)
+
+      state-water_heater-off-color: var(--polar-light-gray)
