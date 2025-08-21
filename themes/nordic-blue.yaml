@@ -1,7 +1,7 @@
 # Nordic Blue Theme
 # Creator: Colton @coltondick
 # Updated: integrated HA palette scales, WA/brand tokens, state rules, and switch bridge (blue-accent)
-# Date: 2025-08-20
+# Date: 2025-08-21
 
 "Nordic Blue":
   card-mod-theme: Nordic Blue
@@ -139,23 +139,23 @@
   # Global state color defaults (used as fallbacks everywhere)
   # ─────────────────────────────────────────────────────────────────────────────
   state-active-color: var(--aurora-yellow)
-  state-inactive-color: var(--polar-light-gray)
+  state-inactive-color: var(--frost-sky-blue)
 
   # Per-domain common states
   state-light-on-color: var(--aurora-yellow)
   state-light-off-color: var(--frost-sky-blue)
 
   state-switch-on-color: var(--aurora-yellow)
-  state-switch-off-color: var(--polar-light-gray)
+  state-switch-off-color: var(--frost-sky-blue)
 
   state-input_boolean-on-color: var(--aurora-yellow)
-  state-input_boolean-off-color: var(--polar-light-gray)
+  state-input_boolean-off-color: var(--frost-sky-blue)
 
   state-lock-locked-color: var(--aurora-green)
   state-lock-unlocked-color: var(--aurora-red)
 
   state-cover-open-color: var(--aurora-pink)
-  state-cover-closed-color: var(--polar-light-gray)
+  state-cover-closed-color: var(--frost-sky-blue)
 
   state-climate-heat-color: var(--aurora-orange)
   state-climate-cool-color: var(--frost-steel-blue)
@@ -175,13 +175,13 @@
   state-person-not_home-color: var(--frost-cadet-blue)
 
   state-humidifier-on-color: var(--frost-steel-blue)
-  state-humidifier-off-color: var(--polar-light-gray)
+  state-humidifier-off-color: var(--frost-sky-blue)
 
   state-siren-on-color: var(--aurora-red)
-  state-siren-off-color: var(--polar-light-gray)
+  state-siren-off-color: var(--frost-sky-blue)
 
   state-vacuum-active-color: var(--frost-green)
-  state-vacuum-docked-color: var(--polar-light-gray)
+  state-vacuum-docked-color: var(--frost-sky-blue)
   state-vacuum-error-color: var(--aurora-red)
 
   # Alarm panel
@@ -193,7 +193,69 @@
   state-alarm_control_panel-arming-color: var(--aurora-orange)
   state-alarm_control_panel-disarming-color: var(--aurora-orange)
   state-alarm_control_panel-pending-color: var(--aurora-yellow)
-  state-alarm_control_panel-triggered-color: var(--aurora-red)
+  state-alarm_control_panel-triggered-color:
+    var(--aurora-red)
+
+    # ── HA palette scales
+  ha-color-primary-05: "#001721"
+  ha-color-primary-10: "#002e3e"
+  ha-color-primary-20: "#004156"
+  ha-color-primary-30: "#006787"
+  ha-color-primary-40: "#009ac7"
+  ha-color-primary-50: "#18bcf2"
+  ha-color-primary-60: "#37c8fd"
+  ha-color-primary-70: "#7bd4fb"
+  ha-color-primary-80: "#b9e6fc"
+  ha-color-primary-90: "#dff3fc"
+  ha-color-primary-95: "#eff9fe"
+
+  ha-color-neutral-05: "#141414"
+  ha-color-neutral-10: "#202020"
+  ha-color-neutral-20: "#363636"
+  ha-color-neutral-30: "#4a4a4a"
+  ha-color-neutral-40: "#5e5e5e"
+  ha-color-neutral-50: "#7a7a7a"
+  ha-color-neutral-60: "#989898"
+  ha-color-neutral-70: "#b1b1b1"
+  ha-color-neutral-80: "#cccccc"
+  ha-color-neutral-90: "#e6e6e6"
+  ha-color-neutral-95: "#f3f3f3"
+
+  ha-color-orange-05: "#280700"
+  ha-color-orange-10: "#3b0f00"
+  ha-color-orange-20: "#5e1c00"
+  ha-color-orange-30: "#7e2900"
+  ha-color-orange-40: "#9d3800"
+  ha-color-orange-50: "#c94e00"
+  ha-color-orange-60: "#f36d00"
+  ha-color-orange-70: "#ff9342"
+  ha-color-orange-80: "#ffbb89"
+  ha-color-orange-90: "#ffe0c8"
+  ha-color-orange-95: "#fff0e4"
+
+  ha-color-red-05: "#2a040b"
+  ha-color-red-10: "#3e0913"
+  ha-color-red-20: "#631323"
+  ha-color-red-30: "#8a132c"
+  ha-color-red-40: "#b30532"
+  ha-color-red-50: "#dc3146"
+  ha-color-red-60: "#f3676c"
+  ha-color-red-70: "#fd8f90"
+  ha-color-red-80: "#ffb8b6"
+  ha-color-red-90: "#ffdedc"
+  ha-color-red-95: "#fff0ef"
+
+  ha-color-green-05: "#031608"
+  ha-color-green-10: "#052310"
+  ha-color-green-20: "#0a3a1d"
+  ha-color-green-30: "#0a5027"
+  ha-color-green-40: "#036730"
+  ha-color-green-50: "#00883c"
+  ha-color-green-60: "#00ac49"
+  ha-color-green-70: "#5dc36f"
+  ha-color-green-80: "#93da98"
+  ha-color-green-90: "#c2f2c1"
+  ha-color-green-95: "#e3f9e3"
 
   # ─────────────────────────────────────────────────────────────────────────────
   # Modes
@@ -327,67 +389,6 @@
       # Alarm
       alarm-color-disarmed: "var(--aurora-green)"
       alarm-color-armed: "var(--aurora-red)"
-
-      # ── HA palette scales (light = inverted ramp)
-      ha-color-primary-05: "#e4f7f7"
-      ha-color-primary-10: "#bfe9ea"
-      ha-color-primary-20: "#86d0d2"
-      ha-color-primary-30: "#58afb3"
-      ha-color-primary-40: "#3a9196"
-      ha-color-primary-50: "#2d777c"
-      ha-color-primary-60: "#236064"
-      ha-color-primary-70: "#1a494b"
-      ha-color-primary-80: "#113436"
-      ha-color-primary-90: "#082022"
-      ha-color-primary-95: "#031415"
-
-      ha-color-neutral-05: "#000000"
-      ha-color-neutral-10: "#dfe4ea"
-      ha-color-neutral-20: "#b4bdc9"
-      ha-color-neutral-30: "#7f8a99"
-      ha-color-neutral-40: "#4c566a"
-      ha-color-neutral-50: "#434c5e"
-      ha-color-neutral-60: "#37404d"
-      ha-color-neutral-70: "#2b3440"
-      ha-color-neutral-80: "#222a34"
-      ha-color-neutral-90: "#171c23"
-      ha-color-neutral-95: "#12161d"
-
-      ha-color-red-05: "#ffedf0"
-      ha-color-red-10: "#ffd9de"
-      ha-color-red-20: "#f1b2b8"
-      ha-color-red-30: "#da838c"
-      ha-color-red-40: "#c0636d"
-      ha-color-red-50: "#a54e57"
-      ha-color-red-60: "#8a3c45"
-      ha-color-red-70: "#6a2c33"
-      ha-color-red-80: "#4a1c21"
-      ha-color-red-90: "#2e0d11"
-      ha-color-red-95: "#20070a"
-
-      ha-color-green-05: "#eafadf"
-      ha-color-green-10: "#cfeec3"
-      ha-color-green-20: "#a6d29a"
-      ha-color-green-30: "#7db16f"
-      ha-color-green-40: "#639556"
-      ha-color-green-50: "#4e7b41"
-      ha-color-green-60: "#3a6230"
-      ha-color-green-70: "#2b4a21"
-      ha-color-green-80: "#1e3416"
-      ha-color-green-90: "#12200c"
-      ha-color-green-95: "#0a1406"
-
-      ha-color-orange-05: "#ffefe7"
-      ha-color-orange-10: "#ffd9c6"
-      ha-color-orange-20: "#f3b190"
-      ha-color-orange-30: "#d88269"
-      ha-color-orange-40: "#b96548"
-      ha-color-orange-50: "#9b5034"
-      ha-color-orange-60: "#7f3f29"
-      ha-color-orange-70: "#623020"
-      ha-color-orange-80: "#452116"
-      ha-color-orange-90: "#2a130c"
-      ha-color-orange-95: "#1b0b06"
 
       # ── WA/brand tokens + HA button fallbacks (LIGHT, BLUE)
       wa-color-fill-loud: "var(--frost-steel-blue)"
@@ -544,67 +545,6 @@
       # Alarm
       alarm-color-disarmed: "var(--aurora-green)"
       alarm-color-armed: "var(--aurora-red)"
-
-      # ── HA palette scales (dark = original ramp)
-      ha-color-primary-05: "#031415"
-      ha-color-primary-10: "#082022"
-      ha-color-primary-20: "#113436"
-      ha-color-primary-30: "#1a494b"
-      ha-color-primary-40: "#236064"
-      ha-color-primary-50: "#2d777c"
-      ha-color-primary-60: "#3a9196"
-      ha-color-primary-70: "#58afb3"
-      ha-color-primary-80: "#86d0d2"
-      ha-color-primary-90: "#bfe9ea"
-      ha-color-primary-95: "#e4f7f7"
-
-      ha-color-neutral-05: "#12161d"
-      ha-color-neutral-10: "#171c23"
-      ha-color-neutral-20: "#222a34"
-      ha-color-neutral-30: "#2b3440"
-      ha-color-neutral-40: "#37404d"
-      ha-color-neutral-50: "#434c5e"
-      ha-color-neutral-60: "#4c566a"
-      ha-color-neutral-70: "#7f8a99"
-      ha-color-neutral-80: "#b4bdc9"
-      ha-color-neutral-90: "#dfe4ea"
-      ha-color-neutral-95: "#eef1f5"
-
-      ha-color-red-05: "#20070a"
-      ha-color-red-10: "#2e0d11"
-      ha-color-red-20: "#4a1c21"
-      ha-color-red-30: "#6a2c33"
-      ha-color-red-40: "#8a3c45"
-      ha-color-red-50: "#a54e57"
-      ha-color-red-60: "#c0636d"
-      ha-color-red-70: "#da838c"
-      ha-color-red-80: "#f1b2b8"
-      ha-color-red-90: "#ffd9de"
-      ha-color-red-95: "#ffedf0"
-
-      ha-color-green-05: "#0a1406"
-      ha-color-green-10: "#12200c"
-      ha-color-green-20: "#1e3416"
-      ha-color-green-30: "#2b4a21"
-      ha-color-green-40: "#3a6230"
-      ha-color-green-50: "#4e7b41"
-      ha-color-green-60: "#639556"
-      ha-color-green-70: "#7db16f"
-      ha-color-green-80: "#a6d29a"
-      ha-color-green-90: "#cfeec3"
-      ha-color-green-95: "#eafadf"
-
-      ha-color-orange-05: "#1b0b06"
-      ha-color-orange-10: "#2a130c"
-      ha-color-orange-20: "#452116"
-      ha-color-orange-30: "#623020"
-      ha-color-orange-40: "#7f3f29"
-      ha-color-orange-50: "#9b5034"
-      ha-color-orange-60: "#b96548"
-      ha-color-orange-70: "#d88269"
-      ha-color-orange-80: "#f3b190"
-      ha-color-orange-90: "#ffd9c6"
-      ha-color-orange-95: "#ffefe7"
 
       # ── WA/brand tokens + HA button fallbacks (DARK, BLUE)
       wa-color-fill-loud: "var(--frost-steel-blue)"
