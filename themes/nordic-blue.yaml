@@ -133,68 +133,8 @@
   energy-battery-out-color: "var(--aurora-red)"
   energy-battery-in-color: "var(--aurora-pink)"
   energy-gas-color: "var(--aurora-orange)"
-  energy-water-color: "var(--aurora-blue)"
-
-  # ─────────────────────────────────────────────────────────────────────────────
-  # Global state color defaults (used as fallbacks everywhere)
-  # ─────────────────────────────────────────────────────────────────────────────
-  state-active-color: var(--aurora-yellow)
-  state-inactive-color: var(--frost-sky-blue)
-
-  # Per-domain common states
-  state-light-on-color: var(--aurora-yellow)
-  state-light-off-color: var(--frost-sky-blue)
-
-  state-switch-on-color: var(--aurora-yellow)
-  state-switch-off-color: var(--frost-sky-blue)
-
-  state-input_boolean-on-color: var(--aurora-yellow)
-  state-input_boolean-off-color: var(--frost-sky-blue)
-
-  state-lock-locked-color: var(--aurora-green)
-  state-lock-unlocked-color: var(--aurora-red)
-
-  state-cover-open-color: var(--aurora-pink)
-  state-cover-closed-color: var(--frost-sky-blue)
-
-  state-climate-heat-color: var(--aurora-orange)
-  state-climate-cool-color: var(--frost-steel-blue)
-  state-climate-auto-color: var(--aurora-green)
-  state-climate-dry-color: var(--aurora-orange)
-  state-climate-fan_only-color: var(--frost-sky-blue)
-  state-climate-heat_cool-color: var(--aurora-yellow)
-
-  state-sun-above_horizon-color: var(--aurora-yellow)
-  state-sun-below_horizon-color: var(--frost-cadet-blue)
-
-  state-media_player-playing-color: var(--aurora-blue)
-  state-media_player-paused-color: var(--polar-light-gray)
-  state-media_player-idle-color: var(--polar-light-gray)
-
-  state-person-home-color: var(--aurora-green)
-  state-person-not_home-color: var(--frost-cadet-blue)
-
-  state-humidifier-on-color: var(--frost-steel-blue)
-  state-humidifier-off-color: var(--frost-sky-blue)
-
-  state-siren-on-color: var(--aurora-red)
-  state-siren-off-color: var(--frost-sky-blue)
-
-  state-vacuum-active-color: var(--frost-green)
-  state-vacuum-docked-color: var(--frost-sky-blue)
-  state-vacuum-error-color: var(--aurora-red)
-
-  # Alarm panel
-  state-alarm_control_panel-disarmed-color: var(--aurora-green)
-  state-alarm_control_panel-armed_home-color: var(--aurora-red)
-  state-alarm_control_panel-armed_away-color: var(--aurora-red)
-  state-alarm_control_panel-armed_night-color: var(--aurora-red)
-  state-alarm_control_panel-armed_vacation-color: var(--aurora-red)
-  state-alarm_control_panel-arming-color: var(--aurora-orange)
-  state-alarm_control_panel-disarming-color: var(--aurora-orange)
-  state-alarm_control_panel-pending-color: var(--aurora-yellow)
-  state-alarm_control_panel-triggered-color:
-    var(--aurora-red)
+  energy-water-color:
+    "var(--aurora-blue)"
 
     # ── HA palette scales
   ha-color-primary-05: "#001721"
@@ -416,6 +356,66 @@
       control-switch-on-color: "var(--state-switch-on-color,  var(--aurora-green))"
       control-switch-off-color: "var(--state-switch-off-color, var(--polar-light-gray))"
 
+      # ─────────────────────────────────────────────────────────────────────────────
+      # State color (LIGHT)
+      # ─────────────────────────────────────────────────────────────────────────────
+      state-active-color: var(--aurora-yellow)
+      state-inactive-color: var(--aurora-blue)
+
+      # Per-domain common states
+      state-light-on-color: var(--aurora-yellow)
+      state-light-off-color: var(--aurora-blue)
+
+      state-switch-on-color: var(--aurora-yellow)
+      state-switch-off-color: var(--aurora-blue)
+
+      state-input_boolean-on-color: var(--aurora-yellow)
+      state-input_boolean-off-color: var(--aurora-blue)
+
+      state-lock-locked-color: var(--aurora-green)
+      state-lock-unlocked-color: var(--aurora-red)
+
+      state-cover-open-color: var(--aurora-pink)
+      state-cover-closed-color: var(--aurora-blue)
+
+      state-climate-heat-color: var(--aurora-orange)
+      state-climate-cool-color: var(--frost-steel-blue)
+      state-climate-auto-color: var(--aurora-green)
+      state-climate-dry-color: var(--aurora-orange)
+      state-climate-fan_only-color: var(--aurora-blue)
+      state-climate-heat_cool-color: var(--aurora-yellow)
+
+      state-sun-above_horizon-color: var(--aurora-yellow)
+      state-sun-below_horizon-color: var(--frost-cadet-blue)
+
+      state-media_player-playing-color: var(--aurora-blue)
+      state-media_player-paused-color: var(--polar-light-gray)
+      state-media_player-idle-color: var(--polar-light-gray)
+
+      state-person-home-color: var(--aurora-green)
+      state-person-not_home-color: var(--frost-cadet-blue)
+
+      state-humidifier-on-color: var(--frost-steel-blue)
+      state-humidifier-off-color: var(--aurora-blue)
+
+      state-siren-on-color: var(--aurora-red)
+      state-siren-off-color: var(--aurora-blue)
+
+      state-vacuum-active-color: var(--frost-green)
+      state-vacuum-docked-color: var(--aurora-blue)
+      state-vacuum-error-color: var(--aurora-red)
+
+      # Alarm panel
+      state-alarm_control_panel-disarmed-color: var(--aurora-green)
+      state-alarm_control_panel-armed_home-color: var(--aurora-red)
+      state-alarm_control_panel-armed_away-color: var(--aurora-red)
+      state-alarm_control_panel-armed_night-color: var(--aurora-red)
+      state-alarm_control_panel-armed_vacation-color: var(--aurora-red)
+      state-alarm_control_panel-arming-color: var(--aurora-orange)
+      state-alarm_control_panel-disarming-color: var(--aurora-orange)
+      state-alarm_control_panel-pending-color: var(--aurora-yellow)
+      state-alarm_control_panel-triggered-color: var(--aurora-red)
+
     # ==========================================================================#
     #                                   DARK                                    #
     # ==========================================================================#
@@ -571,3 +571,63 @@
       # Switch color bridge
       control-switch-on-color: "var(--state-switch-on-color,  var(--aurora-green))"
       control-switch-off-color: "var(--state-switch-off-color, var(--snow-medium))"
+
+      # ─────────────────────────────────────────────────────────────────────────────
+      # State color (DARK)
+      # ─────────────────────────────────────────────────────────────────────────────
+      state-active-color: var(--aurora-yellow)
+      state-inactive-color: var(--frost-sky-blue)
+
+      # Per-domain common states
+      state-light-on-color: var(--aurora-yellow)
+      state-light-off-color: var(--frost-sky-blue)
+
+      state-switch-on-color: var(--aurora-yellow)
+      state-switch-off-color: var(--frost-sky-blue)
+
+      state-input_boolean-on-color: var(--aurora-yellow)
+      state-input_boolean-off-color: var(--frost-sky-blue)
+
+      state-lock-locked-color: var(--aurora-green)
+      state-lock-unlocked-color: var(--aurora-red)
+
+      state-cover-open-color: var(--aurora-pink)
+      state-cover-closed-color: var(--frost-sky-blue)
+
+      state-climate-heat-color: var(--aurora-orange)
+      state-climate-cool-color: var(--frost-steel-blue)
+      state-climate-auto-color: var(--aurora-green)
+      state-climate-dry-color: var(--aurora-orange)
+      state-climate-fan_only-color: var(--frost-sky-blue)
+      state-climate-heat_cool-color: var(--aurora-yellow)
+
+      state-sun-above_horizon-color: var(--aurora-yellow)
+      state-sun-below_horizon-color: var(--frost-cadet-blue)
+
+      state-media_player-playing-color: var(--aurora-blue)
+      state-media_player-paused-color: var(--polar-light-gray)
+      state-media_player-idle-color: var(--polar-light-gray)
+
+      state-person-home-color: var(--aurora-green)
+      state-person-not_home-color: var(--frost-cadet-blue)
+
+      state-humidifier-on-color: var(--frost-steel-blue)
+      state-humidifier-off-color: var(--frost-sky-blue)
+
+      state-siren-on-color: var(--aurora-red)
+      state-siren-off-color: var(--frost-sky-blue)
+
+      state-vacuum-active-color: var(--frost-green)
+      state-vacuum-docked-color: var(--frost-sky-blue)
+      state-vacuum-error-color: var(--aurora-red)
+
+      # Alarm panel
+      state-alarm_control_panel-disarmed-color: var(--aurora-green)
+      state-alarm_control_panel-armed_home-color: var(--aurora-red)
+      state-alarm_control_panel-armed_away-color: var(--aurora-red)
+      state-alarm_control_panel-armed_night-color: var(--aurora-red)
+      state-alarm_control_panel-armed_vacation-color: var(--aurora-red)
+      state-alarm_control_panel-arming-color: var(--aurora-orange)
+      state-alarm_control_panel-disarming-color: var(--aurora-orange)
+      state-alarm_control_panel-pending-color: var(--aurora-yellow)
+      state-alarm_control_panel-triggered-color: var(--aurora-red)
