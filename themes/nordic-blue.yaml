@@ -93,6 +93,8 @@
   ha-line-height-normal: 1.4
   ha-line-height-expanded: 1.6
 
+  ha-card-header-font-size: "var(--ha-font-size-2xl)"
+
   # ─────────────────────────────────────────────────────────────────────────────
   # Card / badge radius
   # ─────────────────────────────────────────────────────────────────────────────
@@ -330,23 +332,6 @@
       alarm-color-disarmed: "var(--aurora-green)"
       alarm-color-armed: "var(--aurora-red)"
 
-      # ── WA/brand tokens + HA button fallbacks (LIGHT, BLUE)
-      wa-color-fill-loud: "var(--frost-steel-blue)"
-      wa-color-on-loud: "var(--snow-light)"
-      wa-color-border-loud: "color-mix(in srgb, var(--frost-steel-blue) 65%, var(--polar-river-gray) 35%)"
-
-      wa-color-fill-normal: "color-mix(in srgb, var(--frost-steel-blue) 20%, var(--snow-light) 80%)"
-      wa-color-on-normal: "var(--polar-bright-gray)"
-      wa-color-border-normal: "color-mix(in srgb, var(--frost-steel-blue) 40%, var(--snow-dark) 60%)"
-
-      wa-color-fill-quiet: "color-mix(in srgb, var(--frost-steel-blue) 12%, var(--snow-light) 88%)"
-      wa-color-on-quiet: "var(--polar-bright-gray)"
-      wa-color-border-quiet: "transparent"
-
-      wa-color-brand-fill-normal: "var(--wa-color-fill-normal)"
-      wa-color-brand-on-normal: "var(--wa-color-on-normal)"
-      wa-color-brand-border-normal: "var(--wa-color-border-normal)"
-
       button-color-fill-normal-hover: "color-mix(in srgb, var(--frost-steel-blue) 24%, var(--snow-light) 76%)"
       button-color-fill-normal-active: "color-mix(in srgb, var(--frost-steel-blue) 32%, var(--snow-medium) 68%)"
       ha-color-fill-primary-loud-hover: "color-mix(in srgb, var(--frost-steel-blue) 90%, var(--snow-light) 10%)"
@@ -545,23 +530,6 @@
       # Alarm
       alarm-color-disarmed: "var(--aurora-green)"
       alarm-color-armed: "var(--aurora-red)"
-
-      # ── WA/brand tokens + HA button fallbacks (DARK, BLUE)
-      wa-color-fill-loud: "var(--frost-steel-blue)"
-      wa-color-on-loud: "var(--snow-light)"
-      wa-color-border-loud: "color-mix(in srgb, var(--frost-steel-blue) 70%, var(--polar-dark-gray) 30%)"
-
-      wa-color-fill-normal: "color-mix(in srgb, var(--frost-steel-blue) 24%, var(--polar-bright-gray) 76%)"
-      wa-color-on-normal: "var(--snow-light)"
-      wa-color-border-normal: "color-mix(in srgb, var(--frost-steel-blue) 45%, var(--polar-dark-gray) 55%)"
-
-      wa-color-fill-quiet: "color-mix(in srgb, var(--frost-steel-blue) 12%, var(--polar-bright-gray) 88%)"
-      wa-color-on-quiet: "var(--snow-medium)"
-      wa-color-border-quiet: "transparent"
-
-      wa-color-brand-fill-normal: "var(--wa-color-fill-normal)"
-      wa-color-brand-on-normal: "var(--wa-color-on-normal)"
-      wa-color-brand-border-normal: "var(--wa-color-border-normal)"
 
       button-color-fill-normal-hover: "color-mix(in srgb, var(--frost-steel-blue) 28%, var(--polar-bright-gray) 72%)"
       button-color-fill-normal-active: "color-mix(in srgb, var(--frost-steel-blue) 36%, var(--polar-river-gray) 64%)"
