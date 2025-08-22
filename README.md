@@ -5,8 +5,6 @@
 
 </div>
 
-<!-- PROJECT LOGO -->
-<br />
 <div align="center">
 
   <h1 align="center">Home Assistant Nordic Theme</h1>
