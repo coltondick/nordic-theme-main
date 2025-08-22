@@ -94,6 +94,7 @@
   ha-line-height-expanded: 1.6
 
   ha-card-header-font-size: "var(--ha-font-size-2xl)"
+  paper-font-headline_-_font-size: "var(--ha-font-size-2xl)"
 
   # ─────────────────────────────────────────────────────────────────────────────
   # Card / badge radius
