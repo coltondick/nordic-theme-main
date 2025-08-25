@@ -282,6 +282,7 @@
   mdc-theme-primary: "var(--accent-medium-color)"
 
   # Switch
+  switch-checked-color: "var(--accent-color)"
   switch-unchecked-color: "var(--snow-dark)"
   switch-checked-button-color: "var(--accent-color)"
   switch-unchecked-track-color: "var(--background-color-2)"
