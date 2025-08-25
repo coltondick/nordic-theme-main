@@ -249,7 +249,7 @@
 
   # Card
   card-background-color: "var(--ha-card-background)"
-  ha-card-background: "var(--snow-light)"
+  ha-card-background: "#fafeff"
   ha-card-box-shadow: "3px 3px 13px -6px rgba(17,35,52,0.2)"
 
   # Icons
