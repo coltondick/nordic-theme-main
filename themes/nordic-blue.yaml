@@ -1,9 +1,9 @@
-# Nordic Combined Theme
+# Nordic Blue Theme
 # Creator: Colton @coltondick
-# Created: A separate theme that will automatically switch between light and dark modes. This is currently separated to maintain card-mod compatibility.
+# Created: Combined the individual dark and light modes into a single theme.
 # Date: 2026-04-02
 
-nordic-combined:
+nordic-blue:
   modes:
     light:
       # ─────────────────────────────────────────────────────────────────────────────
@@ -136,10 +136,10 @@ nordic-combined:
       energy-battery-out-color: "var(--aurora-red)"
       energy-battery-in-color: "var(--aurora-pink)"
       energy-gas-color: "var(--aurora-orange)"
-      energy-water-color: "var(--aurora-blue)"
+      energy-water-color:
+        "var(--aurora-blue)"
 
-      # ── HA palette scales
-
+        # ── HA palette scales
       ha-color-primary-05: "#001721"
       ha-color-primary-10: "#002e3e"
       ha-color-primary-20: "#004156"
@@ -151,8 +151,8 @@ nordic-combined:
       ha-color-primary-80: "#b9e6fc"
       ha-color-primary-90: "#dff3fc"
       ha-color-primary-95: "#eff9fe"
-      ha-color-neutral-05: "#141414"
 
+      ha-color-neutral-05: "#141414"
       ha-color-neutral-10: "#202020"
       ha-color-neutral-20: "#363636"
       ha-color-neutral-30: "#4a4a4a"
@@ -231,8 +231,8 @@ nordic-combined:
       # Main colors
       app-header-background-color: "var(--polar-light-gray)"
       app-header-text-color: "var(--snow-light)"
-      accent-color: "var(--frost-green)"
-      accent-medium-color: "var(--frost-cadet-blue)"
+      accent-color: "var(--frost-steel-blue)" # BLUE brand
+      accent-medium-color: "var(--frost-sky-blue)"
 
       # Backgrounds
       background-color: "var(--snow-light)"
@@ -258,12 +258,12 @@ nordic-combined:
       ha-color-form-background-disabled: "var(--background-color)"
 
       # Icons
-      state-icon-color: "var(--polar-bright-gray)"
+      state-icon-color: "var(--aurora-blue)"
       default-icon-clr: "var(--text-color)"
 
       # Sidebar
       sidebar-background-color: "var(--snow-light)"
-      sidebar-icon-color: "var(--polar-bright-gray)"
+      sidebar-icon-color: "var(--aurora-blue)"
       sidebar-selected-icon-color: "var(--accent-color)"
       sidebar-selected-text-color: "var(--text-color)"
       divider-color: "var(--background-color-2)"
@@ -331,10 +331,10 @@ nordic-combined:
       alarm-color-disarmed: "var(--aurora-green)"
       alarm-color-armed: "var(--aurora-red)"
 
-      button-color-fill-normal-hover: "color-mix(in srgb, var(--frost-green) 26%, var(--snow-light) 74%)"
-      button-color-fill-normal-active: "color-mix(in srgb, var(--frost-green) 34%, var(--snow-medium) 66%)"
-      ha-color-fill-primary-loud-hover: "color-mix(in srgb, var(--frost-green) 90%, var(--polar-river-gray) 10%)"
-      ha-color-fill-primary-loud-active: "color-mix(in srgb, var(--frost-green) 80%, var(--polar-river-gray) 20%)"
+      button-color-fill-normal-hover: "color-mix(in srgb, var(--frost-steel-blue) 24%, var(--snow-light) 76%)"
+      button-color-fill-normal-active: "color-mix(in srgb, var(--frost-steel-blue) 32%, var(--snow-medium) 68%)"
+      ha-color-fill-primary-loud-hover: "color-mix(in srgb, var(--frost-steel-blue) 90%, var(--snow-light) 10%)"
+      ha-color-fill-primary-loud-active: "color-mix(in srgb, var(--frost-steel-blue) 80%, var(--snow-medium) 20%)"
 
       # Switch color bridge (non-breaking)
       control-switch-on-color: "var(--state-switch-on-color,  var(--aurora-green))"
@@ -344,29 +344,29 @@ nordic-combined:
       # State color (LIGHT)
       # ─────────────────────────────────────────────────────────────────────────────
       state-active-color: var(--aurora-yellow)
-      state-inactive-color: var(--polar-light-gray)
+      state-inactive-color: var(--aurora-blue)
 
       # Per-domain common states
       state-light-on-color: var(--aurora-yellow)
-      state-light-off-color: var(--polar-bright-gray)
+      state-light-off-color: var(--aurora-blue)
 
       state-switch-on-color: var(--aurora-yellow)
-      state-switch-off-color: var(--polar-bright-gray)
+      state-switch-off-color: var(--aurora-blue)
 
       state-input_boolean-on-color: var(--aurora-yellow)
-      state-input_boolean-off-color: var(--polar-bright-gray)
+      state-input_boolean-off-color: var(--aurora-blue)
 
       state-lock-locked-color: var(--aurora-green)
       state-lock-unlocked-color: var(--aurora-red)
 
       state-cover-open-color: var(--aurora-pink)
-      state-cover-closed-color: var(--aurora-green)
+      state-cover-closed-color: var(--aurora-blue)
 
       state-climate-heat-color: var(--aurora-orange)
       state-climate-cool-color: var(--frost-steel-blue)
       state-climate-auto-color: var(--aurora-green)
       state-climate-dry-color: var(--aurora-orange)
-      state-climate-fan_only-color: var(--frost-sky-blue)
+      state-climate-fan_only-color: var(--aurora-blue)
       state-climate-heat_cool-color: var(--aurora-yellow)
 
       state-sun-above_horizon-color: var(--aurora-yellow)
@@ -380,13 +380,13 @@ nordic-combined:
       state-person-not_home-color: var(--frost-cadet-blue)
 
       state-humidifier-on-color: var(--frost-steel-blue)
-      state-humidifier-off-color: var(--polar-bright-gray)
+      state-humidifier-off-color: var(--aurora-blue)
 
       state-siren-on-color: var(--aurora-red)
-      state-siren-off-color: var(--polar-bright-gray)
+      state-siren-off-color: var(--aurora-blue)
 
       state-vacuum-active-color: var(--frost-green)
-      state-vacuum-docked-color: var(--polar-bright-gray)
+      state-vacuum-docked-color: var(--aurora-blue)
       state-vacuum-error-color: var(--aurora-red)
 
       # Alarm panel
@@ -531,10 +531,10 @@ nordic-combined:
       energy-battery-out-color: "var(--aurora-red)"
       energy-battery-in-color: "var(--aurora-pink)"
       energy-gas-color: "var(--aurora-orange)"
-      energy-water-color: "var(--aurora-blue)"
+      energy-water-color:
+        "var(--aurora-blue)"
 
-      # ── HA palette scales
-
+        # ── HA palette scales
       ha-color-primary-05: "#001721"
       ha-color-primary-10: "#002e3e"
       ha-color-primary-20: "#004156"
@@ -546,8 +546,8 @@ nordic-combined:
       ha-color-primary-80: "#b9e6fc"
       ha-color-primary-90: "#dff3fc"
       ha-color-primary-95: "#eff9fe"
-      ha-color-neutral-05: "#141414"
 
+      ha-color-neutral-05: "#141414"
       ha-color-neutral-10: "#202020"
       ha-color-neutral-20: "#363636"
       ha-color-neutral-30: "#4a4a4a"
@@ -627,8 +627,8 @@ nordic-combined:
       # Main colors
       app-header-background-color: "var(--polar-light-gray)"
       app-header-text-color: "var(--snow-light)"
-      accent-color: "var(--frost-green)"
-      accent-medium-color: "var(--frost-cadet-blue)"
+      accent-color: "var(--frost-steel-blue)" # BLUE brand
+      accent-medium-color: "var(--frost-sky-blue)"
 
       # Backgrounds
       background-color: "var(--polar-dark-gray)"
@@ -727,10 +727,10 @@ nordic-combined:
       alarm-color-disarmed: "var(--aurora-green)"
       alarm-color-armed: "var(--aurora-red)"
 
-      button-color-fill-normal-hover: "color-mix(in srgb, var(--frost-green) 30%, var(--polar-bright-gray) 70%)"
-      button-color-fill-normal-active: "color-mix(in srgb, var(--frost-green) 38%, var(--polar-river-gray) 62%)"
-      ha-color-fill-primary-loud-hover: "color-mix(in srgb, var(--frost-green) 88%, var(--polar-dark-gray) 12%)"
-      ha-color-fill-primary-loud-active: "color-mix(in srgb, var(--frost-green) 78%, var(--polar-dark-gray) 22%)"
+      button-color-fill-normal-hover: "color-mix(in srgb, var(--frost-steel-blue) 28%, var(--polar-bright-gray) 72%)"
+      button-color-fill-normal-active: "color-mix(in srgb, var(--frost-steel-blue) 36%, var(--polar-river-gray) 64%)"
+      ha-color-fill-primary-loud-hover: "color-mix(in srgb, var(--frost-steel-blue) 88%, var(--polar-dark-gray) 12%)"
+      ha-color-fill-primary-loud-active: "color-mix(in srgb, var(--frost-steel-blue) 78%, var(--polar-dark-gray) 22%)"
 
       # Switch color bridge
       control-switch-on-color: "var(--state-switch-on-color,  var(--aurora-green))"
@@ -756,7 +756,7 @@ nordic-combined:
       state-lock-unlocked-color: var(--aurora-red)
 
       state-cover-open-color: var(--aurora-pink)
-      state-cover-closed-color: var(--aurora-green)
+      state-cover-closed-color: var(--frost-sky-blue)
 
       state-climate-heat-color: var(--aurora-orange)
       state-climate-cool-color: var(--frost-steel-blue)
