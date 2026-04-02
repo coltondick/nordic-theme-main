@@ -253,6 +253,11 @@
   ha-card-background: "var(--polar-bright-gray)"
   ha-card-box-shadow: "3px 3px 13px -6px rgba(17,35,52,1)"
 
+  # forms (since 2026.4)
+  ha-color-form-background: "var(--background-color)"
+  ha-color-form-background-hover: "var(--background-color)"
+  ha-color-form-background-disabled: "var(--background-color)"
+
   # Icons
   state-icon-color: "var(--frost-sky-blue)"
   default-icon-clr: "var(--text-color)"
