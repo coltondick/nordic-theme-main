@@ -1,0 +1,14 @@
+extends: default
+
+rules:
+  line-length: disable
+  comments: disable
+  document-start: disable
+  truthy: disable
+
+  key-duplicates:
+    forbid-duplicated-merge-keys: true
+
+  indentation:
+    spaces: 2
+    indent-sequences: consistent

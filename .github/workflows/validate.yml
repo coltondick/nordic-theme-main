@@ -1,0 +1,42 @@
+name: Validate YAML
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - master
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate YAML and formatting
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install yamllint
+        run: |
+          python -m pip install --upgrade pip
+          pip install yamllint
+
+      - name: Check YAML syntax and duplicate keys
+        run: |
+          yamllint .
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install Prettier
+        run: |
+          npm install --no-save prettier
+
+      - name: Check formatting
+        run: |
+          npx prettier . --check
