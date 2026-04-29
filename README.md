@@ -98,8 +98,6 @@
   </tr>
 </table>
 
-
-
 ### Home Assistant Setup
 
 Make sure that under the **configuration.yaml** file you have the following:

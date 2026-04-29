@@ -1,4 +1,2 @@
-.git
 .venv
-dist
 node_modules
