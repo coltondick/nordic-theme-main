@@ -56,7 +56,20 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create "${GITHUB_REF_NAME}" \
-            --title "${GITHUB_REF_NAME}" \
-            --generate-notes \
-            --verify-tag
+          NOTES_FILE="release-notes/${GITHUB_REF_NAME}.md"
+
+          if [[ -f "$NOTES_FILE" ]]; then
+            echo "Using manual release notes: $NOTES_FILE"
+
+            gh release create "${GITHUB_REF_NAME}" \
+              --title "${GITHUB_REF_NAME}" \
+              --notes-file "$NOTES_FILE" \
+              --verify-tag
+          else
+            echo "Using GitHub-generated release notes"
+
+            gh release create "${GITHUB_REF_NAME}" \
+              --title "${GITHUB_REF_NAME}" \
+              --generate-notes \
+              --verify-tag
+          fi

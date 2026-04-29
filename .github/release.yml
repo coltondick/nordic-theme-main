@@ -1,0 +1,44 @@
+changelog:
+  exclude:
+    labels:
+      - ignore-for-release
+      - dependencies
+    authors:
+      - dependabot
+      - dependabot[bot]
+
+  categories:
+    - title: Breaking Changes
+      labels:
+        - breaking-change
+        - breaking
+
+    - title: New Features
+      labels:
+        - enhancement
+        - feature
+
+    - title: Fixes
+      labels:
+        - bug
+        - fix
+
+    - title: Theme Changes
+      labels:
+        - theme
+        - home-assistant
+
+    - title: Documentation
+      labels:
+        - documentation
+        - docs
+
+    - title: Maintenance
+      labels:
+        - maintenance
+        - chore
+        - refactor
+
+    - title: Other Changes
+      labels:
+        - "*"
