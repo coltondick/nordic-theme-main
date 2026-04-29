@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.3.6 - Deduplication of keys
+
+Deduplication of keys accidentally added in the Web Awesome compatibility layer.
+
 ## v2.3.5 - Deduplication of keys
 
 Removed duplicate keys causing warnings to be thrown in the log.
