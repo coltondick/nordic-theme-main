@@ -1,7 +1,7 @@
 <!-- PROJECT SHIELDS -->
 <div align="center">
 
-[![hacs_badge](https://img.shields.io/badge/HACS-Default-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration) [![Last Commit](https://img.shields.io/github/last-commit/coltondick/nordic-theme-main?style=for-the-badge)](https://github.com/coltondick/nordic-theme-main/commits/main) [![GitHub license](https://img.shields.io/github/license/coltondick/nordic-theme-main?style=for-the-badge)](https://github.com/coltondick/nordic-theme-main/blob/main/LICENSE)
+[![hacs_badge](https://img.shields.io/badge/HACS-Default-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration) [![Last Commit](https://img.shields.io/github/last-commit/coltondick/nordic-theme-main?style=for-the-badge)](https://github.com/coltondick/nordic-theme-main/commits/main) [![GitHub license](https://img.shields.io/github/license/coltondick/nordic-theme-main?style=for-the-badge)](LICENSE)
 
 </div>
 
