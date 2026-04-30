@@ -20,6 +20,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v5
 
+      - name: Check for manual release notes
+        run: |
+          NOTES_FILE="release-notes/${GITHUB_REF_NAME}.md"
+
+          if [[ -f "$NOTES_FILE" ]]; then
+            echo "Manual release notes found: $NOTES_FILE"
+          else
+            echo "::notice::No manual release notes found at $NOTES_FILE. GitHub-generated notes will be used."
+          fi
+
       - name: Install yamllint
         run: |
           python -m pip install --upgrade pip

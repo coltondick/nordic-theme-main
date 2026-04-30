@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "lint:yaml": "yamllint .",
+    "validate": "yamllint . && prettier . --check"
+  },
+  "devDependencies": {
+    "prettier": "^3.8.0"
+  }
+}
