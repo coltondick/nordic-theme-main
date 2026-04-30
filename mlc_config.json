@@ -1,0 +1,17 @@
+{
+  "ignorePatterns": [
+    {
+      "pattern": "^https://github\\.com/coltondick/nordic-theme-main/blob/main/LICENSE$"
+    }
+  ],
+  "replacementPatterns": [],
+  "httpHeaders": [
+    {
+      "urls": ["https://github.com/"],
+      "headers": {
+        "User-Agent": "markdown-link-check"
+      }
+    }
+  ],
+  "aliveStatusCodes": [200, 206, 429]
+}

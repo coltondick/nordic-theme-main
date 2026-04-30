@@ -12,6 +12,9 @@ on:
 permissions:
   contents: read
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
 jobs:
   markdown-link-check:
     name: Check markdown links
@@ -21,8 +24,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v5
 
-      - name: Check links
+      - name: Check markdown links
         uses: gaurav-nelson/github-action-markdown-link-check@v1
         with:
           use-quiet-mode: "yes"
           use-verbose-mode: "yes"
+          config-file: "mlc_config.json"
