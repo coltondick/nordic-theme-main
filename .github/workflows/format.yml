@@ -39,7 +39,7 @@ jobs:
           npx prettier \
             "*.md" \
             "*.json" \
-            "*.yaml" \
+            "themes/*.yaml" \
             "*.yml" \
             ".github/release.yml" \
             "release-notes/**/*.md" \
