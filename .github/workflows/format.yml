@@ -36,7 +36,14 @@ jobs:
 
       - name: Run Prettier
         run: |
-          npx prettier . --write
+          npx prettier \
+            "*.md" \
+            "*.json" \
+            "*.yaml" \
+            "*.yml" \
+            ".github/release.yml" \
+            "release-notes/**/*.md" \
+            --write
 
       - name: Commit formatting changes
         run: |

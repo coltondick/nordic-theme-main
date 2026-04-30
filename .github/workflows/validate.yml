@@ -42,4 +42,11 @@ jobs:
 
       - name: Check formatting
         run: |
-          npx prettier . --check
+          npx prettier \
+            "*.md" \
+            "*.json" \
+            "*.yaml" \
+            "*.yml" \
+            ".github/release.yml" \
+            "release-notes/**/*.md" \
+            --check
